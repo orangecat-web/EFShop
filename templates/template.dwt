@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+	<meta http-equiv="content-language" content="zh-Hant-TW">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>商業服務業雙語資源入口</title>
+	<!-- TemplateEndEditable -->
+	<link rel="stylesheet" href="../layout/tw/css/_reset.css">
+	<link rel="stylesheet" href="../layout/tw/css/content.css">
+	<link href="../layout/tw/css/jquery.mmenu.css" rel="stylesheet" type="text/css" />
+	<!--js-->
+    <script src="../js/jquery-1.8.1.min.js"></script>
+    <script src="../js/jquery-iifun.js"></script>
+    <!--行動裝置選單 JS-->
+    <script src="../js/superfish.js"></script>
+    <script src="../js/jquery.mmenu.min.all.js"></script>
+    <script>
+        $(function() {
+            $('.superfish').superfish();
+            $('#MenuMobile').mmenu();
+        });
+    </script>
+	<!-- TemplateBeginEditable name="head" -->
+	<!-- TemplateEndEditable -->
+</head>
+
+
+<body>
+	<!--header-->
+	<header id="header">
+		<div class="logo_search">
+			<!--Logo-->
+			<div class="logo">
+				<h1><a href="."><img src="../layout/tw/images/logo.svg" alt="英語店家通"></a></h1>
+			</div>
+			<!--搜尋-->
+			<ul class="right_link">
+				<li class="home">
+					<a href="index.html" title="回首頁">首頁</a>
+				</li>
+				<li class="facebook">
+					<a href="#" title="Facebook(開啟新視窗)" target="_blank">facebook</a>
+				</li>
+				<li class="language">
+					<a href="#" title="English">english</a>
+				</li>
+				<li class="search">
+						<input type="text" placeholder="Search">
+						<input type="submit" value="">
+				</li>
+			</ul>
+		</div>
+		<!--電腦版選單-->
+		<nav role="navigation" class="main_nav">
+            <ul class="desktop_nav">
+                <li>
+                    <a href="#" title="訊息公告">
+                        訊息公告
+                    </a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#" title="">
+                                sub nav 01
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                sub nav 02
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#" title="">
+                                        sub nav 02-1
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="關於計畫" class="project">
+                        關於計畫
+                    </a>
+                </li>
+                <li>
+                    <a href="friendly_map_intro.html" title="英語友善店家" class="friendly_map">
+                        英語友善店家
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="商業實用資源" class="resource">
+                        商業實用資源
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="申請與報名" class="apply">
+                        申請與報名
+                    </a>
+                </li>
+            </ul>
+        </nav>
+	</header>
+
+	<main>
+		<article>
+<!--	麵包屑	-->
+		<ul id="Breadcrumbs">
+			<li><a href="index.html">首頁</a></li>
+			<!--TemplateBeginEditable name="breadcrumbs" -->
+			<li><a href="">英語友善店家</a></li>
+			<li><a href="">英語友善店家地圖</a></li>
+			<li><a href="">九份老街</a></li>
+			<!-- TemplateEndEditable -->
+		</ul>
+		<!--toolbar-->
+            <div class="ToolBar">
+                <div class="colm_left">
+                    <a href="javascript:void(0);" onclick="javascript:window.history.go(-1);" title="回上一頁" class="return"><span></span>回上一頁</a>
+                    <a href="javascript:void(0);" onclick="javascript:window.print();" onkeypress="javascript:window.print();" title="列印此頁(若連結無法使用，請改用鍵盤Ctrl+P鍵亦可列印)" class="print"><span></span>友善列印</a>
+                </div>
+                <div class="colm_right">
+                    <dl class="font_size">
+                        <dt>字級：</dt>
+                        <dd class="font_small"><a href="javascript:void(0)" title="小字級">小字級</a></dd>
+                        <dd class="font_medium"><a href="javascript:void(0)" title="中字級">中字級</a></dd>
+                        <dd class="font_big"><a href="javascript:void(0)" title="大字級">大字級</a></dd>
+                        <noscript class="noscript">
+								若您無法使用字級縮放功能，請改用鍵盤"Ctrl"+"加號鍵"或"Ctrl"+"減號鍵"，來放大或縮小字級
+								</noscript>
+                    </dl>
+                    <dl class="share">
+                        <dt>分享：</dt>
+                        <dd class="facebook"><a title="分享到Facebook(開啟新視窗)" href="https://www.facebook.com/sharer/sharer.php?u=網址" target="_blank">分享到Facebook</a></dd>
+                        <dd class="twitter"><a title="分享到Twitter(開啟新視窗)" href="https://twitter.com/intent/tweet?url=網址&amp;text=標題" target="_blank">分享到Twitter</a></dd>
+                        <dd class="line"><a title="分享到Line(開啟新視窗)" href="" target="_blank">分享到Line</a></dd>
+                        <noscript class="noscript">
+								當SCRIPT關閉時,請點選以下連結：
+								<a href="https://www.facebook.com/" target="_blank" title="(開啟新視窗)">Facebook</a>
+								<a href="https://twitter.com/" target="_blank" title="(開啟新視窗)">Twitter</a>
+								<a href="https://line.me/" target="_blank" title="(開啟新視窗)">Line</a>
+								</noscript>
+                    </dl>
+                </div>
+            </div>
+            <!--toolbar end-->
+		<!-- TemplateBeginEditable name="main" -->
+		<!--toolbar-->
+		<div class="ToolBar">
+				<div class="colm_left">
+						<a href="javascript:void(0);" onclick="javascript:window.history.go(-1);" title="回上一頁" class="return"><span></span>回上一頁</a>
+						<a href="javascript:void(0);" onclick="javascript:window.print();" onkeypress="javascript:window.print();" title="列印此頁(若連結無法使用，請改用鍵盤Ctrl+P鍵亦可列印)" class="print"><span></span>友善列印</a>
+				</div>
+				<div class="colm_right">
+						<dl class="font_size">
+								<dt>字級：</dt>
+								<dd class="font_small"><a href="javascript:void(0)" title="小字級">小字級</a></dd>
+								<dd class="font_medium"><a href="javascript:void(0)" title="中字級">中字級</a></dd>
+								<dd class="font_big"><a href="javascript:void(0)" title="大字級">大字級</a></dd>
+								<noscript class="noscript">
+								若您無法使用字級縮放功能，請改用鍵盤"Ctrl"+"加號鍵"或"Ctrl"+"減號鍵"，來放大或縮小字級
+								</noscript>
+						</dl>
+						<dl class="share">
+								<dt>分享：</dt>
+								<dd class="facebook"><a title="分享到Facebook(開啟新視窗)" href="https://www.facebook.com/sharer/sharer.php?u=網址" target="_blank">分享到Facebook</a></dd>
+								<dd class="twitter"><a title="分享到Twitter(開啟新視窗)" href="https://twitter.com/intent/tweet?url=網址&amp;text=標題" target="_blank">分享到Twitter</a></dd>
+								<dd class="line"><a title="分享到Line(開啟新視窗)" href="" target="_blank">分享到Line</a></dd>
+								<noscript class="noscript">
+								當SCRIPT關閉時,請點選以下連結：
+								<a href="https://www.facebook.com/" target="_blank" title="(開啟新視窗)">Facebook</a>
+								<a href="https://twitter.com/" target="_blank" title="(開啟新視窗)">Twitter</a>
+								<a href="https://line.me/" target="_blank" title="(開啟新視窗)">Line</a>
+								</noscript>
+						</dl>
+				</div>
+		</div>
+		<!--toolbar end-->
+		
+	
+		<!-- TemplateEndEditable -->
+		</article>
+	</main>
+		<!-- footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="logo">
+					<div>
+						<a href="https://www.moea.gov.tw/" title="經濟部商業司 (開啟新視窗)" target="_blank"><img src="../layout/tw/images/logo_moea.png" alt="經濟部商業司"></a>
+					</div>
+					<div>
+						<a href="https://www.cdri.org.tw/" title="商業發展研究院 (開啟新視窗)" target="_blank"><img src="../layout/tw/images/logo_cdri.png" alt="商業發展研究院"></a>
+					</div>
+				</div>
+				<div class="footer_link">
+					<dl class="share">
+						<dd>累積瀏覽人次：46239</dd>
+						<dd><a href="#" title="聯絡我們">聯絡我們</a></dd>
+						<dd><a href="#" title="網站地圖">網站地圖</a></dd>
+						<dd class="footerFB"><a href="#" title="Facebook" target="_blank"><img src="../layout/tw/images/icon_fb.svg" alt="Facebook"></a></dd>
+						<dd class="footerYT"><a href="#" title="Youtube" target="_blank"><img src="../layout/tw/images/icon_youtube.svg" alt="Youtube"></a></dd>
+						<dd class="footerTW"><a href="#" title="Twitter" target="_blank"><img src="../layout/tw/images/icon_twitter.svg" alt="Twitter"></a></dd>
+						<dd class="footerIG"><a href="#" title="instagram" target="_blank"><img src="../layout/tw/images/icon_ig.svg" alt="instagram"></a></dd>
+					</dl>
+					<div class="copyright">Copyright &copy; 2021 English Friendly Shops in Taiwan. All Rights Reserved.</div>
+				</div>
+			</div>
+		</footer>
+
+	<!-- 行動裝置版選單-->
+    <div id="nav">
+        <div class="switch"><a href="#MenuMobile"><span class="menu-action"><i></i></span></a></div>
+        <div id="MenuMobile">
+            <ul>
+                <li class="mm-search"><span class="search_box"><input placeholder="站內搜尋" type="text" value="" /><input type="submit" value="搜尋" class="btn" /></span></li>
+                <li><a href="javascript:;">線上預約</a>
+                    <ul>
+                        <li><a href="javascript:;">sub nav 01</a></li>
+                        <li><a href="javascript:;">sub nav 02</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">關於計畫</a></li>
+                <li><a href="javascript:;">英語友善店家</a></li>
+                <li><a href="javascript:;">商業實用資源</a></li>
+                <li><a href="javascript:;">申請與報名</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 行動裝置版選單 end-->
+
+	<!--下列css及網頁大集合連結為測試資料,套程式時請刪除-->
+	<style>
+		.ifun_text_menu { position:fixed; top:0; left:0; z-index:10006; }
+		.ifun_text_menu a { display:block; text-decoration:none; }
+		.ifun_text_menu > ul > li > a { text-indent:-10000px; width:20px; height:20px; }
+		.ifun_text_menu > ul ul { display:none; position:absolute; width:150px; border-right: 1px solid #13406a}
+		.ifun_text_menu > ul > li > ul { top:20px; left:0; }
+		.ifun_text_menu > ul > li > ul ul { top:0; left:150px; }
+		.ifun_text_menu > ul li:hover > ul { display:block; }
+		.ifun_text_menu > ul ul li { background-color:rgba(255,255,255,0.85); position:relative; }
+		.ifun_text_menu > ul ul a { padding:5px 10px; line-height:180%; font-size:14px; color:#333; }
+	</style>
+	<div class="ifun_text_menu">
+		<ul>
+			<li><a href="">Menu</a>
+				<ul>
+					<li><a href="../index.html">入口分流頁</a></li>
+					<li><a href="index.html">首頁</a></li>
+					<li><a href="contpage.html">單篇</a></li>
+					<li><a href="pic_list.html">圖文列表</a></li>
+					<li><a href="menu_search.html">菜單檢索</a></li>
+					<li><a href="friendly_map_intro.html">友善地圖商圈入口</a></li>
+					<li><a href="friendly_map_list.html">友善地圖商圈列表</a></li>
+     <li><a href="friendly_map_contpage.html">友善地圖商圈單篇</a></li>
+					<li><a href="qna.html">常見問題</a></li>
+					<li><a href="history.html">大事記</a></li>
+					<li><a href="search_result.html">全文檢索</a></li>
+					<li><a href="sitemap.html">網站導覽</a></li>
+					<li><a href="news_list.html">文字列表</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--網頁大集合連結 end-->
+</body>
+</html>

@@ -1,0 +1,1221 @@
+// 【2021-商業服務業雙語資源入口(英語店家通)-EFShop】 index sass
+@import _layout
+/* 導覽列(麵包屑) */
+ul#Breadcrumbs
+	+breadcrumbs
+/* 工具列 */
+div.ToolBar
+	+toolbar
+
+// content
+main
+	background: url("../images/bg_content.png") 50% top repeat-y
+	background-size: 100%
+	article
+		+container(xl)
+		position: relative
+		z-index: 2
+		+breakpoint(xl)
+			+px(1)
+		+breakpoint(lg)
+			+px(1)
+// page header
+div.page_header
+	+mb(1)
+	div.PageTitle
+		h2
+			+fontSize(1.5)
+			font-weight: 500
+			color: map-get($master, tangerine)
+			&::before
+				content: ''
+				border-left: 6px solid map-get($master, tangerine)
+				+pr(.5)
+	div.articleTitle
+		border-bottom: 1px solid #ddd
+		+mb(.5)
+		+pb(.5)
+		h2, h3
+			+fontSize(2.5)
+			color: map-get($master, blushPink)
+			letter-spacing: 2px
+	>p.date
+		span
+			background: map-get($master, regalBlue)
+			+fontSize(.8125)
+			color: #fff
+			+py(.1)
+			+px(.5)
+// editor
+			@import url('editable_content.css')
+.editable_content
+	&::after
+		content: ''
+		clear: both !important
+	+breakpoint
+		.imgright, .imgleft
+			max-width: 100%
+			+mx(0)
+		#colorbox_thum a
+			width: 50%
+// 單篇
+h4.tit_file
+	color: map-get($assist, ass3-2)
+h4.tit_link
+	color: map-get($assist, ass2-2)
+h4.tit_photo
+	color: map-get($assist, ass1-2)
+ul.ext_list
+	li
+		border-bottom: 1px dashed #ddd
+		+py(1)
+		&:last-of-type
+			border-bottom: none
+
+// 圖文列表
+div.pic_list
+	+row
+	+mx(-1)
+	>div
+		+col(4)
+		+mb(2)
+		+breakpoint(md)
+			+col(6)
+		+breakpoint(sm)
+			+col(6)
+		+breakpoint
+			+col-auto
+		div.items
+			height: 100%
+			background: #fff
+			border: 3px solid map-get($master, casper)
+			box-shadow: #c5d5e865 5px 5px
+			+radius(2)
+			+pb(1)
+			overflow: hidden
+			position: relative
+			fieldset.img
+				overflow: hidden
+				aspect-ratio: 411/284
+				display: flex
+				img
+					width: 100%
+					height: 100%
+					max-height: 284px
+					object-fit: cover
+					+breakpoint(md)
+						max-height: 315px
+					+breakpoint
+						max-height: 368px
+			&:focus, &:focus-visible
+				border: 2px solid #f00
+			div.cont
+				+px(1)
+				+mb(2.666666666666667)
+				position: relative
+				min-height: 157px
+				div.date
+					background: map-get($master, regalBlue)
+					+radius(.3333)
+					font-size: 15px
+					font-weight: 500
+					color: #fff
+					+py(.35)
+					+px(1)
+					position: absolute
+					top: -2.5rem
+					right: 1.5rem
+				div.title
+					+mt(1.5)
+					+mb(1)
+					a
+						+fontSize(1.5)
+						font-weight: 500
+						color: map-get($master, blushPink)
+						letter-spacing: 2px
+						&:hover
+							color: map-get($assist, ass1-2)
+				div.desc
+					+mline(3)
+			div.more_link
+				+tac
+				+mb(1)
+				a
+					span
+						border: 1px solid map-get($master, tangerine)
+						+radius(2)
+						color: map-get($master, tangerine)
+						+py(.5)
+						+px(1.5)
+						+hover_transition
+					&:hover
+						span
+							background: map-get($master, tangerine)
+							color: #fff
+
+// 菜單檢索
+div.page_header
+	div.menu_search
+		+tac
+		h2
+			+fontSize(2.5)
+			color: #444
+			+mb(5)
+			&::before
+				content: none
+			span
+				position: relative
+				+mr(3)
+				&::before
+					content: ''
+					width: 30px
+					height: 40px
+					background: url("../images/icon_menu_search.svg") 50% 50% no-repeat
+					border-left: none
+					position: absolute
+					top: .15rem
+					left: 0
+%tabHover
+	p
+		background: map-get($assist, ass2-2)
+		color: #fff
+div.menu_search_tab
+	div.menu_search_content
+		+pb(5)
+	ul.tabs
+		+row
+		+jcc
+		li
+			+col-auto
+			+px(2)
+			p
+				width: 235px
+				height: 44px
+				background: #fff
+				border: 3px solid map-get($master, tangerine)
+				+radius(10)
+				+fontSize(1.25)
+				font-weight: 300
+				letter-spacing: 2px
+				line-height: 40px
+				+tac
+				+mb(.5)
+				cursor: pointer
+			&:hover
+				@extend %tabHover
+		li.active
+			@extend %tabHover
+			a
+				color: #fff
+div.tab_content_item
+	+col(11)
+	+mx-auto
+	+mt(4)
+	+breakpoint
+		+cols
+		+px(0)
+	ul.menu_search_form
+		+row
+		+mb(5)
+		li
+			select, input, button
+				background: #adbed270
+				border: 2px solid map-get($master, casper)
+				+radius(2)
+				color: $text_color
+				+py(.5)
+				+px(1.25)
+				position: relative
+			select
+				width: 100%
+				background: url("../images/icon_select.svg") 92.5% 50% no-repeat #adbed270
+				background-size: 10px
+				+tac
+				text-align-last: center
+				appearance: none
+				position: relative
+				option
+					+tal
+			input
+				width: 100%
+			input[type="submit"]
+				background: url("../images/btn_search.svg") 20px 50% no-repeat #adbed270
+				background-size: 20px 20px
+				+fontSize(1.2)
+				+py(.2)
+				+pr(2)
+				+pl(3.25)
+				position: relative
+				&:hover
+					background: url("../images/btn_search.svg") 20px 50% no-repeat #adbed290
+					background-size: 20px 20px
+		li
+			&:nth-of-type(1),
+			&:nth-of-type(2)
+				+col(2)
+				+px(.5)
+			&:nth-of-type(3)
+				+cols
+				+px(.5)
+			&:nth-of-type(4)
+				+col-auto
+				+px(.5)
+			+breakpoint(md)
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3),
+				&:nth-of-type(4)
+					+mb(.5)
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3)
+					+col(4)
+				&:nth-of-type(4)
+					+col(12)
+					+tac
+			+breakpoint(sm)
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3),
+				&:nth-of-type(4)
+					+col(12)
+					+mb(.5)
+				&:nth-of-type(4)
+					+tac
+			+breakpoint
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3),
+				&:nth-of-type(4)
+					+col(12)
+					+mb(.5)
+				&:nth-of-type(4)
+					+tac
+	h3
+		+fontSize(1.5)
+		font-weight: 400
+		color: #444
+		+mb(.5)
+		&::before
+			content: ''
+			border-left: 5px solid map-get($master, tangerine)
+			+mr(.5)
+	h3.memu_title
+		float: left
+	div.download
+		float: right
+		+tar
+		&::after
+			content: ''
+			width: 100%
+			clear: both
+		a
+			span
+				background: map-get($master, regalBlue)
+				+radius(2)
+				+fontSize(1.15)
+				color: #fff
+				+py(.5)
+				+pr(2)
+				+pl(3.7)
+				position: relative
+				&::before
+					content: ''
+					width: 20px
+					height: 20px
+					background: url(../images/icon_download.svg) 50% 50% no-repeat
+					position: absolute
+					left: 25px
+					top: 8px
+			&:hover
+				span
+					background: map-get($master, blushPink)
+		>span
+			+mr(1)
+
+	table.menu_table
+		width: 100%
+		>caption
+			background: map-get($master, blushPink)
+			border:
+				top: 1px solid map-get($master, blushPink )
+				right: 1px solid map-get($master, blushPink )
+				left: 1px solid map-get($master, blushPink )
+			+fontSize(1.25)
+			font-weight: 300
+			color: #fff
+			+tal
+			+py(.5)
+			+px(1)
+		tr
+			background: map-get($master, casper)
+			th
+				border: 1px solid #ccc
+				font-weight: 300
+				+py(.5)
+				+px(1)
+				&:first-of-type
+					width: 30%
+				&:last-of-type
+					width: 70%
+			td
+				background: #eff2f6
+				border: 1px solid #ccc
+				+py(.5)
+				+px(1)
+				&:first-of-type
+					width: 30%
+				&:last-of-type
+					width: 70%
+			+breakpoint(sm)
+				td
+					+fontSize(1.15)
+					&:first-of-type
+						width: 35%
+			+breakpoint
+				td
+					+fontSize(1.15)
+					&:first-of-type
+						width: 35%
+
+// 友善地圖商圈
+// 商圈入口
+section.friendly_map_intro
+	+pb(6)
+	position: relative
+	div.taiwan_map_svg
+		max-height: 686px
+		+tac
+		svg#taiwan
+			height: 100%
+			max-height: 686px
+			.north, .south, .east, .west
+				cursor: pointer
+			.north
+				fill: #eb8f9060
+				&:hover, &:focus
+					fill: #eb8f90
+			.west
+				fill: #ffb47160
+				&:hover, &:focus
+					fill: #ffb471
+			.east
+				fill: #12406a60
+				&:hover, &:focus
+					fill: #12406a
+			.south
+				fill: #adbed260
+				&:hover, &:focus
+					fill: #adbed2
+	div.lightbox
+		width: 35%
+		display: none
+		+col(6)
+		+pt(3)
+		+hover_transition
+		position: absolute
+		top: 0
+		left: 5vw
+		+breakpoint(md)
+			width: 100%
+			+col(12)
+			position: absolute
+			top: 0
+			left: 0
+		+breakpoint(sm)
+			width: 100%
+			+col(12)
+			position: absolute
+			top: -1.5rem
+			left: 0
+		+breakpoint
+			width: 100%
+			+col(12)
+			+pt(5.5)
+			position: absolute
+			top: -1.5rem
+			left: 0
+		&:target
+			display: flex
+			flex-direction: column
+			+hover_transition
+		div.content
+			width: 100%
+			max-width: 450px
+			background: #12406a80
+			border: 5px solid #fff
+			+radius(2)
+			box-shadow: #adbed250 5px 5px
+			position: relative
+			+breakpoint(md)
+				+mx-auto
+			+breakpoint(sm)
+				+mx-auto
+			+breakpoint
+				+mx-auto
+			// close btn
+			a.close
+				display: block
+				position: absolute
+				top: -0.25rem
+				right: -0.5rem
+				&::before
+					content: ''
+					width: 11px
+					height: 11px
+					background: url("../images/btn_close.svg") 50% 50% no-repeat
+					position: absolute
+					top: 5px
+					right: 5px
+					z-index: 1
+				&::after
+					content: ''
+					width: 21px
+					height: 21px
+					background: #fff
+					border: 1px solid #666
+					border-radius: 50%
+					box-shadow: #00000050 2px 2px 5px
+					position: absolute
+					top: 0
+					right: 0
+					display: flex
+			// content
+			div.title
+				position: relative
+				h2
+					width: 100%
+					+tac
+					position: absolute
+					top: -25px
+					span
+						border: 5px solid #fff
+						box-shadow: #adbed250 5px 5px
+						+radius(1)
+						+fontSize(2)
+						font-weight: 400
+						color: #fff
+						+py(.5)
+						+px(1.5)
+			div.area
+				+col(12)
+				+mt(4)
+				+px(1)
+				+breakpoint
+					+px(.5)
+				// tabs
+				div.code-tabs
+					width: 100%
+					+radius(.3)
+					box-shadow: #13406a35 3px 3px
+					+row
+					overflow-x: hidden
+					button.tablinks
+						+cols
+						backgorund: #fff
+						border: 1px solid #ccc
+						+pt(.35)
+						+pb(.45)
+						+px(1)
+						&:hover
+							background: #13406a
+							color: #fff
+						&:first-of-type
+							+radius(.3, left)
+						&:last-of-type
+							+radius(.3, right)
+					button.sg-current
+						background: #13406a
+						color: #fff
+
+			// 商圈列表連結
+			div.tab_area_content
+				+mt(2)
+				+pb(1)
+				+px(1)
+				>ul
+					+row
+					li
+						+col(6)
+						+mb(1.25)
+						a
+							color: #fff
+							+pl(1.5)
+							position: relative
+							display: inline-block
+							&::before
+								content: ''
+								width: 18px
+								height: 18px
+								background: url("../images/icon_friendly_map.svg") 50% 50% no-repeat
+								position: absolute
+								top: 3px
+								left: 0
+				+breakpoint
+					+px(0)
+	#north
+		div.title
+			span
+				background: map-get($master, blushPink)
+	#west
+		div.title
+			span
+				background: map-get($master, tangerine)
+	#south
+		div.title
+			span
+				background: map-get($master, casper)
+	#east
+		div.title
+			span
+				background: map-get($master, regalBlue)
+
+	// 商圈列表
+section.friendly_map_list
+	>div.title
+		+col(6)
+		+no-gutters
+		+radius(3)
+		box-shadow: #eaf3fb 5px 5px
+		+mx-auto
+		+mt(8)
+		+mb(6)
+		overflow: hidden
+		+row
+		+breakpoint(md)
+			+col(8)
+			+px(0)
+		+breakpoint(sm)
+			+col-auto
+		>div
+			+cols
+			+tac
+			+py(1)
+			h2
+				+fontSize(1.75)
+				font-weight: 300
+				color: #fff
+				letter-spacing: 3px
+		div.area
+			background: map-get($master, blushPink)
+		div.city
+			background: map-get($master, tangerine)
+	div.map_list
+		+row
+		align-content: space-between
+		align-items: stretch
+		// +mb(16)
+		div.list_cont
+			+col(4)
+			+mb(2)
+			+pb(9.5)
+			position: relative
+			+breakpoint(md)
+				+col(6)
+			+breakpoint(sm)
+				+col(6)
+			+breakpoint
+				+col(12)
+			div.list_position
+				width: 96%
+				position: absolute
+				top: 63%
+				+pl(1)
+				+pr(2)
+				// left: 30px
+				div.content
+					// width: 92%
+					background: #fff
+					box-shadow: #adbed230 5px 5px
+					+px(1.25)
+					+pt(1.25)
+					+pb(1.25)
+					position: relative
+					div.tip_location
+						position: absolute
+						top: -18px
+						left: 1rem
+						span
+							background: map-get($master, blushPink)
+							+fontSize(1.125)
+							color: #fff
+							+px(1.75)
+							+py(.5)
+					div.title
+						h3
+							+fontSize(1.5)
+							letter-spacing: 2px
+							a
+								color: #0359ae
+								&:hover, &:focus
+									color: #d95051
+					div.intro
+						letter-spacing: 2px
+						line-height: 1.75
+						+mline(3)
+
+// 商圈內頁
+section.friend_map_cont
+	// 右側快捷按鈕
+	aside.sidenav
+		position: fixed
+		right: 0
+		top: 35vh
+		ul
+			list-style: none
+			li
+				+tar
+				+mb(1.25)
+				+pr(3)
+				position: relative
+				&::after
+					content: ''
+					width: 28%
+					height: 2px
+					border-bottom: 2px solid map-get($master, blushPink)
+					position: absolute
+					right: 0
+					top: 45%
+	%friend_map_title
+		h2
+			+fontSize(2.5)
+			font-weight: 500
+			letter-spacing: 5px
+	// 介紹圖 , 標題 , 介紹文
+	div#Maps_Content
+		+mb(6)
+		div.img
+			>figure
+				figcaption
+					+fontSize(.85)
+					font-weight: 300
+					position: relative
+					+ml(.25)
+					+pl(.85)
+					&::before
+						content: ''
+						width: 8px
+						height: 8px
+						background: url("../images/icon_select.svg") 50% 50% no-repeat
+						position: absolute
+						left: 0
+						top: 8px
+						transform: scaleY(-1)
+	.Maps_Content
+		@extend %friend_map_title
+		h2
+			font-weight: 700
+			line-height: 1
+			color: map-get($master, tangerine)
+			+mb(1)
+		p
+			letter-spacing: 2px
+			line-height: 26px
+			+mb(1)
+	// video
+	div#Video
+		+row
+		+mb(5)
+		+mx-auto
+		div.MsgModule_Media
+			+col(6)
+			+mb(3)
+		div.media_wrap
+			iframe
+				width: 100%
+				height: 350px
+	+breakpoint(sm)
+		div#Video
+			div.MsgModule_Media
+			+col(12)
+	+breakpoint
+		div#Video
+			div.MsgModule_Media
+				+col(12)
+
+	// map
+	div#Map
+		+my(10)
+		+px(1)
+		div.title
+			@extend %friend_map_title
+			color: #555
+			+tac
+			+mb(4)
+		div.img_map
+			border: 5px solid map-get($master, casper)
+			box-shadow: #adcfef70 6px 6px
+		div.download_map
+			+tac
+			+mt(3)
+			a
+				background: #eff2f6
+				border: 3px solid #5b7da5
+				+radius(3)
+				box-shadow: #12406a70 6px 6px
+				+fontSize(1.25)
+				color: map-get($master, regalBlue)
+				+py(.75)
+				+px(5)
+				&:hover, &:focus
+					background: map-get($master, regalBlue)
+					color: #fff
+	// 商家介紹
+	div#Introduction
+		+mb(10)
+		div.title
+			@extend %friend_map_title
+			+tac
+			+mb(5)
+		div.intro_cont
+			+row
+			div.intro_list
+				+col(3)
+				+mb(2)
+				+breakpoint(md)
+					+col(4)
+				+breakpoint(sm)
+					+col(6)
+				+breakpoint
+					+col(12)
+				div.list_cont
+					background: #f9f9f9
+					border: 1px solid #f0f0f0
+					box-shadow: #f9f9f9 6px 6px
+					h3
+						+fontSize(1.5)
+						font-weight: 500
+						color: #0359ae
+						+tac
+						+mt(1)
+						+mb(.75)
+					div.tip
+						+tac
+						+mb(1.35)
+						span
+							border-bottom: 1px solid map-get($master, blushPink)
+							+fontSize(1.25)
+							color: map-get($master, blushPink)
+							+px(.5)
+							+pb(.2)
+					ul.intro_item
+						+px(1.15)
+						li
+							color: map-get($master, regalBlue)
+							+mb(1)
+							+pl(1.75)
+							position: relative
+							&::before
+								content: ''
+								width: 18px
+								height: 18px
+								background: url("../images/icon_intro_list.svg") 50% 50% no-repeat
+								position: absolute
+								top: 3px
+								left: 0
+					div.location
+						+tac
+						+mt(1.5)
+						+mb(2)
+						a
+							background: #f8d7d7
+							border: 3px solid map-get($master, blushPink)
+							+radius(3)
+							color: map-get($assist, ass1-1)
+							+px(2)
+							+py(.5)
+							position: relative
+							&:hover, &:focus
+								background: map-get($master, blushPink)
+								border-color: #f8d7d7
+							span
+								position: relative
+								+ml(1.25)
+								&::after
+									content: ''
+									width: 16px
+									height: 16px
+									background: url("../images/icon_intro_gps.svg") 50% 50% no-repeat
+									position: absolute
+									right: 0
+									top: 2px
+	// 交通資訊
+	div#Transport
+		+pb(10)
+		div.title
+			@extend %friend_map_title
+			color: #555
+			+tac
+			+mb(5)
+		div.transport
+			+row
+			>div
+				+col(6)
+				+breakpoint(sm)
+					+col(12)
+				div.trans
+					background: #f9f9f9
+					border: 1px solid #f0f0f0
+					box-shadow: #f9f9f9 6px 6px
+					+py(1)
+					+px(2.5)
+					div.title
+						+mb(1)
+						h3
+							+fontSize(1.5)
+							font-weight: 500
+							letter-spacing: 2px
+							color: #0359ae
+							position: relative
+							span
+								position: relative
+								+pr(2)
+								&::before
+									content: ''
+									height: 24px
+									position: absolute
+									left: 0
+									top: 2px
+						h3.bus
+							span
+								&::before
+									width: 24px
+									background: url("../images/icon_bus.svg") 50% 50% no-repeat
+						h3.mrt
+							span
+								&::before
+									width: 21px
+									background: url("../images/icon_mrt.svg") 50% 50% no-repeat
+					div.content
+						ul
+							li
+								+mb(1)
+								&:last-of-type
+									+mb(0)
+		div.backToMap
+			+tac
+			+pt(5)
+			a
+				background: #eff2f6
+				border: 3px solid #5b7da5
+				+radius(3)
+				box-shadow: #12406a70 6px 6px
+				+fontSize(1.25)
+				color: map-get($master, regalBlue)
+				+py(.75)
+				+px(5)
+				&:hover, &:focus
+					background: map-get($master, regalBlue)
+					color: #fff
+
+// QA
+section.qna
+	background: #fff
+div#qaContent
+	background: #fff
+	+mt(3)
+	+mb(5)
+	ul.accordionPart
+		border: 3px solid #eee
+		box-shadow: #adcfef60 5px 5px
+		+radius(.5)
+		overflow: hidden
+		li
+			background: map-get($master, casper)
+			border-bottom: 1px solid #ddd
+			cursor: pointer
+			&:nth-of-type(even)
+				background: #adbed299
+			&:last-of-type
+				border-bottom: none
+			div
+				+fontSize(1.25)
+				+py(1)
+				+pl(5)
+				+pr(2)
+				position: relative
+				&::before
+					content: ''
+					width: 30px
+					height: 30px
+					position: absolute
+					top: 15px
+					left: 30px
+			div.qa_title
+				color: #12406a
+				&::before
+					background: url("../images/icon_qa_01.svg") 50% 50% no-repeat
+			div.qa_content
+				background: #fff
+				&::before
+					background: url("../images/icon_qa_02.svg") 50% 50% no-repeat
+
+// 大事記
+section.history
+	+p(1)
+	// ranger slider
+
+	// timeline
+	.timeline, .timeline::before, .timeline *, .timeline *::before
+		box-sizing: border-box
+	.timeline
+		width: 100%
+		height: 100%
+		+my(0)
+		+mx-auto
+		overflow-y: hidden
+		position: relative
+		&::before
+			content: ''
+			width: 5px
+			height: 100%
+			background: #ccc
+			margin-left: -1px
+			position: absolute
+			top: 0
+			left: 50%
+		.timeline-block
+			margin: 40px 0
+			&:nth-of-type(2n+2)
+				.timeline-content
+					background: map-get($master, casper)
+					&::before
+						border-color: transparent map-get($master, casper) transparent transparent
+						+breakpoint
+							border-width: 0 10px 13px 10px
+							border-color: transparent transparent map-get($master, casper) transparent
+			&:nth-of-type(3n+3)
+				.timeline-content
+					background: map-get($master, tangerine)
+					&::before
+						border-color: transparent map-get($master, tangerine) transparent transparent
+						+breakpoint
+							border-width: 0 10px 13px 10px
+							border-color: transparent transparent map-get($master, tangerine) transparent
+			&:nth-of-type(4n+4)
+				.timeline-content
+					background: map-get($master, blushPink)
+					&::before
+						border-color: transparent map-get($master, blushPink) transparent transparent
+						+breakpoint
+							border-width: 0 10px 13px 10px
+							border-color: transparent transparent map-get($master, blushPink) transparent
+			&:nth-of-type(2n+2)
+				.timeline-date
+					>span
+						background: map-get($master, casper)
+						box-shadow: map-get($master, casper) 3px 3px
+			&:nth-of-type(3n+3)
+				.timeline-date
+					>span
+						background: map-get($master, tangerine)
+						box-shadow: map-get($master, tangerine) 3px 3px
+			&:nth-of-type(4n+4)
+				.timeline-date
+					>span
+						background: map-get($master, blushPink)
+						box-shadow: map-get($master, blushPink ) 3px 3px
+		.timeline-icon
+			width: 20px
+			height: 20px
+			background: #fcd7a2
+			border-radius: 100%
+			+tac
+			margin-top: -2px
+			margin-left: -16px
+			position: absolute
+		.timeline-icon.timeline-icon-hide-border
+			border: 0
+		.timeline-content
+			width: 45%
+			background: map-get($master, regalBlue)
+			+radius(.667)
+			color: #fff
+			+p(1.5)
+			position: relative
+			&::before
+				content: ''
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 13px 20px 13px 0
+				border-color: transparent map-get($master, regalBlue) transparent transparent
+				position: absolute
+				top: 24px
+				left: -20px
+				+breakpoint
+					border-width: 0 10px 13px 10px
+					border-color: transparent transparent map-get($master, regalBlue) transparent
+					top: -13px
+					left: 48.5%
+			div.history_list
+				+fontSize(1.3)
+				word-break: break-word
+				+mb(.75)
+				+pl(1)
+				position: relative
+				+breakpoint(sm)
+					+fontSize(1)
+				+breakpoint
+					+fontSize(1)
+				// &::before
+				// 	content: ''
+				// 	width: 18px
+				// 	height: 18px
+				// 	background: url("../images/icon_plus.svg") 50% 50% no-repeat
+				// 	position: absolute
+				// 	left: 0
+				// 	top: 7px
+				&:last-of-type
+					+mb(0)
+
+			ul.history_list
+				li
+					+fontSize(1.3)
+					+mb(.75)
+					+pl(1.5)
+					position: relative
+					+breakpoint(sm)
+						+fontSize(1)
+					+breakpoint
+						+fontSize(1)
+					&::before
+						content: ''
+						width: 18px
+						height: 18px
+						background: url("../images/icon_plus.svg") 50% 50% no-repeat
+						position: absolute
+						left: 0
+						top: 7px
+					&:last-of-type
+						+mb(0)
+		.timeline-date
+			position: absolute
+			top: 20px
+			left: 118%
+			>span
+				width: auto
+				background: map-get($master, regalBlue)
+				border: 2px solid #fff
+				+radius(.5)
+				box-shadow: map-get($master, regalBlue ) 3px 3px
+				+fontSize(.8)
+				letter-spacing: 1px
+				color: #fff
+				+pt(.85)
+				+pb(.35)
+				+px(1.25)
+				span
+					+fontSize(1.5)
+					font-weight: 500
+	// left based logic
+	.timeline.timeline-left
+		&::before
+			margin-left: 150px
+			left: auto
+			+breakpoint
+				margin-left: 0
+				left: 49.25%
+		.timeline-block
+			margin-left: 200px
+			margin-right: 10px
+			+breakpoint
+				margin-top: 107px
+				margin-bottom: 145px
+				margin-left: 0
+		.timeline-icon
+			margin-left: -58px
+			margin-top: 26px
+			left: auto
+			+breakpoint
+				margin-top: -45px
+				margin-left: 47.125%
+		.timeline-content
+			width: auto
+		.timeline-date
+			width: auto
+			+tar
+			margin-left: -198px
+			left: 0
+			+breakpoint
+				width: 100%
+				+tac
+				margin-left: 0
+				top: -95px
+	.ranger_slider
+		+col(10)
+		+ml-auto
+		+mt(3)
+		+breakpoint(sm)
+			+col(12)
+		+breakpoint
+			+col(12)
+
+// sitemap
+div.sitemap
+	+mb(5)
+	ol.sitemap_tree
+		background: #fff
+		li
+			border-bottom: 1px solid map-get($assist, ass3-1)
+			+fontSize(1.25)
+			+p(1.25)
+			a
+				&:hover, &:focus
+					border-bottom: 1px solid map-get($assist, ass1-2)
+			ol
+				+ml(2)
+				li
+					border-bottom: none
+					+fontSize(1)
+					+py(.5)
+		li.home
+			background: #12406a
+			+tac
+			+py(1)
+			a
+				color: #fff
+				&:hover, &:focus
+					border-bottom: 1px solid #fff
+
+// search result
+div.SearchResult
+	div.results_count
+		border-bottom: 1px solid map-get($master, casper)
+		+mb(2)
+		+py(1)
+		span
+			color: map-get($master, blushPink)
+	div.item
+		border-bottom: 1px solid map-get($master, casper)
+		+mb(2)
+		+pb(2)
+		>div
+			+mb(.55)
+			+fontSize(1.15)
+			line-height: 2
+			span
+				color: map-get($master, blushPink)
+		div.title
+			a
+				+fontSize(1.5)
+				color: map-get($master, regalBlue)
+				&:hover, &:focus
+					color: map-get($assist, ass1-2)
+		div.cat
+			a
+				&:hover, &:focus
+					border-bottom: 1px solid map-get($assist, ass1-2)
+div.CatTitle
+	+CatTitle
+	+row
+	+col(12)
+	+jcb
+div.ListTable
+	+ListTable
+	th
+		&:nth-of-type(1),
+		&:nth-of-type(2)
+			width: 19%
+		&:last-of-type
+			width: 62%

@@ -1,0 +1,743 @@
+// 【2021-商業服務業雙語資源入口(英語店家通)-EFShop】 index sass
+@import _layout
+main
+	+px(0)
+/*slider*/
+section.slider
+	+mb(5)
+	.jssorl-004-double-tail-spin img
+		animation-name: jssorl-004-double-tail-spin
+		animation-duration: 1.6s
+		animation-iteration-count: infinit
+		animation-timing-function: linear
+	@keyframes jssorl-004-double-tail-spin
+		from
+			transform: rotate(0deg)
+		to
+			transform: rotate(360deg)
+	// ssor slider bullet skin 032 css
+	.jssorb032
+		position: absolute
+	.jssorb032 .i
+		position: absolute
+		cursor: pointer
+	.jssorb032 .i .b
+		fill: #fff
+		fill-opacity: 1
+		stroke: #000
+		stroke-width: 1200
+		stroke-miterlimit: 10
+		stroke-opacity: 1
+	.jssorb032 .i:hover .b
+		fill: #000
+		fill-opacity: 1
+		stroke: #fff
+		stroke-width: 2000
+		stroke-opacity: 1
+	.jssorb032 .iav .b
+		fill: #000
+		fill-opacity: 1
+		stroke: #fff
+		stroke-width: 2000
+		stroke-opacity: 1
+	.jssorb032 .i.idn
+		opacity: 1
+	// jssor slider arrow skin 103 css
+	.jssora103
+		display: block
+		position: absolute
+		cursor: pointer
+	#jssor_1
+		position: relative
+		margin: 0 auto
+		top: 0px
+		left: 0px
+		width: 1920px
+		height: 600px
+		overflow: hidden
+		visibility: hidden
+	div[data-u="loading"]
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100%
+		text-align: center
+		background-color: rgba(0,0,0,0.7)
+		>img
+			margin-top: -19px
+			position: relative
+			top: 50%
+			width: 38px
+			height: 38px
+	div[data-u="slides"]
+		cursor: default
+		position: relative
+		top: 0px
+		left: 0px
+		width: 1920px
+		height: 600px
+		overflow: hidden
+	div[data-u="navigator"]
+		position: absolute
+		bottom: 16px
+		right: 16px
+	div[data-u="prototype"]
+		width: 16px
+		height: 16px
+		svg
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	div[data-u="arrowleft"], div[data-u="arrowright"]
+		width: 75px
+		height: 75px
+		top: 0px
+		span
+			&::before
+				content: ""
+				width: 64px
+				height: 64px
+				position: absolute
+	div[data-u="arrowleft"]
+		left: 25px
+		span
+			&::before
+				background: url("../images/btn_arrow_left.png") 50% 50% no-repeat
+	div[data-u="arrowright"]
+		right: 25px
+		span
+			&::before
+				background: url("../images/btn_arrow_right.png") 50% 50% no-repeat
+
+/*成果影音*/
+section.video
+	position: relative
+	+pb(5)
+	&::before
+		width: 239px
+		height: 185px
+		background: url("../images/img_camara.png") left bottom no-repeat
+		bottom: 118px
+	&::after
+		width: 178px
+		height: 255px
+		background: url("../images/img_earth.png") right top no-repeat
+		right: 0
+		top: 0
+	&::before, &::after
+		content: ""
+		background-size: contain
+		position: absolute
+	h2
+		+fontSize(2.5)
+		font-weight: 500
+		letter-spacing: .35rem
+		color: $headings
+		+tac
+		+py(2)
+		span
+			+mr(4)
+			position: relative
+			&::before
+				content: ""
+				width: 51px
+				height: 40px
+				background: url("../images/icon_title_video.png") left 50% no-repeat
+				position: absolute
+				top: 0
+				left: 0
+	div.video
+		+row
+		+jcc
+		position: relative
+		z-index: 2
+		div.video_thumb
+			+col(6)
+			a
+				figure
+					display: flex
+					position: relative
+					aspect-ratio: 619/446
+					// play button
+					span
+						&::before
+							content: ""
+							width: 100%
+							height: 100%
+							background: url("../images/icon_play.png") 50% 50% no-repeat
+							position: absolute
+							z-index: 3
+					figcaption
+						width: 100%
+						height: 100%
+						background: #adbed299
+						+radius(2)
+						position: absolute
+						top: 0
+						left: 0
+						mix-blend-mode: multiply
+						display: none
+					img
+						width: 100%
+						max-height: 452px
+						border: 3px solid #fff
+						+radius(2)
+						object-fit: cover
+				&:hover
+					figure
+						figcaption
+							display: block
+				&:focus
+					figure
+						outline: 2px dashed #d95051
+			&:first-of-type
+				a
+					img
+						box-shadow: map-get($master, blushPink) 7px 7px
+					&:hover
+						img
+							box-shadow: map-get($assist, ass1-2) 7px 7px
+			&:last-of-type
+				a
+					img
+						box-shadow: map-get($master, casper) 7px 7px
+					&:hover
+						img
+							box-shadow: map-get($assist, ass3-2) 7px 7px
+			p
+				+fontSize(1.375)
+				font-weight: 500
+				letter-spacing: 2px
+				+mt(1.5)
+				+px(1)
+	div.more
+		+tac
+		+py(3)
+		a
+			background: #fecabb
+			border: 3px solid #f02a2c
+			+radius(2)
+			box-shadow: #f97d80 5px 5px
+			+fontSize(1.375)
+			font-weight: 400
+			text-transform: uppercase
+			color: map-get($master, blushPink)
+			letter-spacing: 1px
+			+px(5)
+			+py(.85)
+			&:hover, &:focus
+				background: #f02a2c
+				color: #fecabb
+	+breakpoint(mo1600)
+		&::before
+			bottom: 30px
+	+breakpoint(md)
+		&::before
+			bottom: 0
+	+breakpoint
+		&::before
+			width: 100px
+			height: 77px
+			bottom: 150px
+		&::after
+			width: 54px
+			height: 78px
+		h3
+			+fontSize(2)
+		div.video
+			flex-wrap: wrap
+			flex-direction: column
+			div.video_thumb
+				+col(12)
+				+mb(2)
+				div
+					a
+						span
+							top: 38%
+							left: 38%
+				p
+					+fontSize(1.25)
+
+/*英語友善地圖*/
+section.region
+	h2
+		+fontSize(2.5)
+		font-weight: 500
+		letter-spacing: .35rem
+		color: $headings
+		+tac
+		+py(2)
+		span
+			+mr(6.5)
+			position: relative
+			&::before
+				content: ""
+				width: 80px
+				height: 80px
+				background: url("../images/icon_title_map_guide.png") left 50% no-repeat
+				position: absolute
+				top: -1.1rem
+				left: 0
+		+breakpoint
+			+fontSize(2)
+			letter-spacing: 1px
+			span
+				+mr(4.5)
+				&::before
+					width: 60px
+					height: 60px
+					background-size: contain
+					top: -.8rem
+					left: 0
+
+	div.region
+		+row
+		+mt(12)
+		+mb(10)
+		>div
+			+col(3)
+			+px(0)
+			color: #fff
+			position: relative
+			&::after
+				content: ""
+				width: 100%
+				height: 100%
+				max-height: 700px
+				position: absolute
+				bottom: 0
+				z-index: 1
+			div.content
+				+mx(1.5)
+				position: relative
+				z-index: 2
+				div.img_thumb
+					// width: 100%
+					// height: 50vh
+					// max-width: 430px
+					// max-height: 430px
+					overflow: hidden
+					aspect-ratio: 1 / 1
+					+mx-auto
+					+tac
+					+breakpoint(d1440)
+						max-height: 315px
+						+mt(2)
+					+breakpoint(d1366)
+						max-height: 315px
+						+mt(2)
+					+breakpoint(d1280)
+						max-height: 315px
+						+mt(2)
+					+breakpoint(xl)
+						+mt(2)
+					+breakpoint(lg)
+						max-height: 443px
+						+mt(2)
+					img
+						height: 100%
+						border: 10px solid
+						+radius(1.67)
+						object-fit: cover
+						overflow: hidden
+				div.intro
+					h3
+						+fontSize(2.5)
+						font-weight: 500
+						letter-spacing: 5px
+						+tac
+						+py(1)
+					p
+						line-height: 28px
+						letter-spacing: 1px
+						+taf
+						+px(2)
+						+mline(6)
+				div.more
+					+tac
+					+py(3)
+					+px(1.5)
+					a
+						border-style: solid
+						border-width: 3px
+						+radius(2.5)
+						+fontSize(1.375)
+						font-weight: 400
+						text-transform: uppercase
+						letter-spacing: 1px
+						+px(5)
+						+py(.9)
+		div.north
+			&::after
+				background: url("../images/bg_map_guide_thumb_01.png") right bottom no-repeat map-get($master, blushPink)
+			div.content
+				div.img_thumb
+					img
+						border-color: #d95051
+				div.intro
+					h3
+						color: #5e1112
+			div.more
+				a
+					background: #fdd2d4
+					border-color: #f02a2c
+					box-shadow: 5px 5px #f97d80
+					color: #fa8a8d
+					&:hover, &:focus
+						background: #f02a2c
+		div.central
+			&::after
+				background: url("../images/bg_map_guide_thumb_02.png") right bottom no-repeat map-get($master, tangerine)
+			div.content
+				div.img_thumb
+					img
+						border-color: #e48e14
+				div.intro
+					h3
+						color: #63340a
+			div.more
+				a
+					background: #fde2c9
+					border-color: #e48e14
+					box-shadow: 5px 5px #faa04c
+					color: #f9b270
+					&:hover, &:focus
+						background: #e48e14
+		div.south
+			&::after
+				background: url("../images/bg_map_guide_thumb_03.png") right bottom no-repeat map-get($master, casper)
+			div.content
+				div.img_thumb
+					img
+						border-color: #5b7da5
+				div.intro
+					h3
+						color: #09335a
+			div.more
+				a
+					background: #eff2f6
+					border-color: #5b7da5
+					box-shadow: 5px 5px #98b2d1
+					color: #5b7da5
+					&:hover, &:focus
+						background: #5b7da5
+						color: #eff2f6
+		div.east
+			&::after
+				background: url("../images/bg_map_guide_thumb_04.png") right bottom no-repeat map-get($master, regalBlue)
+			div.content
+				div.img_thumb
+					img
+						border-color: #2680d4
+				div.intro
+					h3
+						color: #adcfef
+			div.more
+				a
+					background: #d4dde4
+					border-color: #2680d4
+					box-shadow: 5px 5px #1555b5
+					color: #2680d4
+					&:hover, &:focus
+						background: #2680d4
+						color: #d4dde4
+		+breakpoint(mo1440)
+			>div
+				&::after
+					max-height: 600px
+		+breakpoint(mo1366)
+			>div
+				&::after
+					max-height: 580px
+				div.content
+					div.intro
+						h3
+							+fontSize(2)
+		+breakpoint(lg)
+			+mt(3)
+			>div
+				+col(6)
+				+px(0)
+				&::after
+					max-height: initial
+				div.content
+					+mb(3)
+					+pt(2)
+					div.img_thumb
+						width: fit-content
+						height: fit-content
+						+mx-auto
+						display: flex
+		+breakpoint(md)
+			+mt(3)
+			>div
+				+col(6)
+				+px(0)
+				&::after
+					max-height: initial
+				div.content
+					+mb(3)
+					+pt(2)
+					div.img_thumb
+						width: fit-content
+						height: fit-content
+						+mx-auto
+						display: flex
+		+breakpoint(sm)
+			+mt(3)
+			>div
+				+col(6)
+				+px(0)
+				&::after
+					max-height: initial
+				div.content
+					+mb(3)
+					+pt(2)
+					div.img_thumb
+						width: fit-content
+						height: fit-content
+						+mx-auto
+						display: flex
+		+breakpoint
+			+mt(3)
+			>div
+				+col(12)
+				+pt(2)
+				+px(0)
+				&::after
+					max-height: initial
+		+breakpoint(iphonexp)
+			>div
+				height: auto
+				div.more
+						position: initial
+						+mb(3)
+						+tac
+		+breakpoint(ipdp)
+			>div
+				height: auto
+				div.more
+						position: initial
+						+mb(3)
+						+tac
+		+breakpoint(ipdl)
+			>div
+				height: auto
+				div.more
+						position: initial
+						+mb(3)
+						+tac
+
+/*雙語商業推薦指南*/
+section.guide
+	background: url("../images/bg_guide.png") left top repeat
+	+mb(10)
+	+py(2.7)
+	position: relative
+	&::before, &::after
+		content: ""
+		background-size: contain
+		position: absolute
+	&::before
+		width: 118px
+		height: 157px
+		background: url("../images/bg_ball_left.png") left 50% no-repeat
+		top: 35%
+	&::after
+		width: 435px
+		height: 446px
+		background: url("../images/bg_tradeguide_left.png") right bottom no-repeat
+		right: 0
+		bottom: 0
+	>div
+		+row
+		justify-content: center
+		align-items: center
+		position: relative
+		z-index: 2
+		div.content
+			+col(7)
+			+pr(3)
+			h2
+				+fontSize(2.5)
+				font-weight: 500
+				letter-spacing: .35rem
+				color: #e48e14
+				+mb(1)
+				+py(2)
+				span
+					+mr(6.5)
+					position: relative
+					&::before
+						content: ""
+						width: 80px
+						height: 80px
+						background: url("../images/icon_title_guide.png") left 50% no-repeat
+						background-size: contain
+						position: absolute
+						top: -1.1rem
+						left: 0
+			p
+				line-height: 2
+				letter-spacing: 1px
+				+taf
+		div.img
+			+col(5)
+			img
+				border: 10px solid #e48e14
+				+radius(1.67)
+				overflow: hidden
+	+breakpoint(mo1280)
+		>div
+			+px(2)
+	+breakpoint(lg)
+		div.content
+			width: 60%
+		div.img
+			width: 40%
+	+breakpoint(md)
+		>div
+			div.content
+				h3
+					+fontSize(2)
+					letter-spacing: 1px
+	+breakpoint(sm)
+		>div
+			flex-direction: column-reverse
+			div.content, div.img
+				width: 100%
+			div.content
+				+pr(0)
+	+breakpoint
+		+my(0)
+		>div
+			flex-direction: column-reverse
+			div.content, div.img
+				+col(12)
+			div.content
+				+px(0)
+				h2
+					+fontSize(1.75)
+					letter-spacing: 2px
+					+pb(0)
+					span
+						+mr(2.3)
+						&::before
+							width: 30px
+							height: 30px
+							top: 1px
+
+/*計畫簡介*/
+section.project
+	display: flex
+	+mb(10)
+	ul.projectImg
+		width: 55%
+		background: url("../images/bg_ball_left.png") left 50% no-repeat map-get($master, blushPink)
+		+tar
+		+pr(1)
+		+py(1.67)
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		li
+			border: 3px solid #fff
+			+radius(1.67)
+			box-shadow: #d95051 -5px 5px
+			+ml(1.5)
+			overflow: hidden
+	div.content
+		width: 45%
+		background: map-get($master, casper)
+		+radius(20, right)
+		+mr(10)
+		+py(2)
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: row-reverse
+		div.title
+			width: 40%
+			h2
+				+fontSize(2.5)
+				font-weight: 500
+				letter-spacing: .35rem
+				color: #5b7da5
+				+tac
+				+mb(2)
+			p
+				+tac
+				a
+					background: #eff2f6
+					border: 3px solid #5b7da5
+					+radius(1.5)
+					box-shadow: 5px 5px #98b2d1
+					font-weight: 400
+					text-transform: uppercase
+					color: #5b7da5
+					letter-spacing: 1px
+					+px(3.5)
+					+py(.65)
+					&:hover, &:focus
+						background: #5b7da5
+						color: #eff2f6
+		div.intro
+			width: 60%
+			+taf
+			+pl(3)
+			p
+				line-height: 2
+	+breakpoint(mo1440)
+		ul.projectImg
+			width: 45%
+		div.content
+			width: 55%
+	+breakpoint(lg)
+		flex-direction: column-reverse
+		ul.projectImg
+			width: 100%
+		div.content
+			max-width: initial
+			width: 100%
+			+radius(0)
+			+py(2)
+	+breakpoint(md)
+		flex-direction: column-reverse
+		ul.projectImg
+			width: 100%
+		div.content
+			max-width: initial
+			width: 100%
+			+radius(0)
+			+py(2)
+	+breakpoint(sm)
+		flex-direction: column-reverse
+		ul.projectImg
+			width: 100%
+		div.content
+			max-width: initial
+			width: 100%
+			+radius(0)
+			+py(2)
+	+breakpoint
+		+mb(0)
+		flex-direction: column-reverse
+		ul.projectImg
+			width: 100%
+		div.content
+			max-width: initial
+			width: 100%
+			+radius(0)
+			+p(2)
+			flex-direction: column
+			div.title
+				width: 100%
+				h2
+					+fontSize(1.75)
+			div.intro
+				width: 100%
+				+mt(2)
+				+pl(0)

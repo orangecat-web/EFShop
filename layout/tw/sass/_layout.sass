@@ -1,0 +1,380 @@
+// Orange's web template basic v1.0
+@import _basic
+// body
+body
+	background: url("../images/bg_body.png") 50% top repeat
+
+// container
+.container
+	+container(xl)
+
+// header
+header#header
+	background: url("../images/bg_header.png") top center no-repeat
+	background-size: 100% 6px
+	position: relative
+	div.logo_search
+		+row
+		+jcb
+		+ais
+		+pt(1.5)
+		+pb(.5)
+		+px(3.5)
+		div.logo
+			+logo(11.5)
+		ul.right_link
+			text-transform: uppercase
+			+row
+			+jce
+			+aic
+			+pt(1.25)
+			+pr(1.25)
+			li
+				position: relative
+				+mr(1.25)
+				+pl(1.5)
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					top: 1px
+				&:last-of-type
+					+mr(0)
+					+ml(1)
+					+pl(0)
+			li.home
+				&::before
+					top: 5px
+					width: 19px
+					height: 15px
+					background: url("../images/icon_home.svg") left 50% no-repeat
+			li.facebook
+				&::before
+					width: 16px
+					height: 16px
+					background: url("../images/icon_fb_gray.svg") left 50% no-repeat
+			li.language
+				&::before
+					width: 17px
+					height: 17px
+					background: url("../images/icon_language.svg") left 50% no-repeat
+			li.search
+				background: rgba(173, 190, 210, .3)
+				border: 2px solid map-get($master, casper)
+				+radius(1.5)
+				+py(.5)
+				+px(.75)
+				input
+					background: none
+					border: none
+					&::placeholder
+						color: #888
+				input[type="submit"]
+					width: 17px
+					height: 17px
+					background: url("../images/icon_search.svg") 50% 50% no-repeat
+					border: none
+					+mr(.35)
+			+breakpoint(md)
+				+dNone
+			+breakpoint(sm)
+				+dNone
+			+breakpoint
+				+dNone
+	// pc nav
+	nav.main_nav
+		position: relative
+		&::before
+			width: $width
+			height: 6px
+			border-bottom: 6px solid #ddd
+			position: absolute
+			bottom: 0
+			z-index: 1
+			content: ''
+		ul.desktop_nav
+			+container(xl)
+			+row
+			+jcb
+			+px(0)
+			position: relative
+			z-index: 3
+			>li
+				+cols
+				border-bottom: 6px solid map-get($master, blushPink)
+				+fontSize(1.125)
+				+tac
+				+no-gutters
+				position: relative
+				+py(.75)
+				&:hover, &:focus, &:focus-within, &:focus-visible
+					background: map-get($master, blushPink)
+					>a
+						color: #fff
+				&:nth-of-type(4n+2)
+					border-bottom: 6px solid map-get($master, tangerine)
+					&:hover, &:focus, &:focus-within, &:focus-visible
+						background: map-get($master, tangerine)
+				&:nth-of-type(4n+3)
+					border-bottom: 6px solid map-get($master, casper)
+					&:hover, &:focus, &:focus-within, &:focus-visible
+						background: map-get($master, casper)
+				&:nth-of-type(4n+4)
+					border-bottom: 6px solid map-get($master, regalBlue)
+					&:hover, &:focus, &:focus-within, &:focus-visible
+						background: map-get($master, regalBlue)
+				&:focus-visible
+					outline: 2px dashed #d95051
+				>ul, >ul>li ul
+					width: 100%
+					background: #fff
+					visibility: hidden
+					opacity: 0
+					display: none
+					position: absolute
+					top: 49px
+					left: 0
+					>li
+						position: relative
+						border-bottom: map-get($master, blushPink)
+						+py(.75)
+						a
+							color: #666
+							&:hover, &:focus, &:focus-within
+								color: #000
+						ul
+							position: absolute
+							top: 0
+							left: 100%
+						&:hover, &:focus-within
+							cursor: pointer
+							>ul
+								visibility: visible
+								opacity: 1
+								display: block
+				&:hover, &:focus-within
+					cursor: pointer
+					>ul
+						visibility: visible
+						opacity: 1
+						display: block
+
+	+breakpoint(md)
+		nav.main_nav
+			+dNone
+	+breakpoint(sm)
+		nav.main_nav
+			+dNone
+	+breakpoint
+		nav.main_nav
+			+dNone
+// mobile nav
+#MenuMobile
+	z-index: 9999
+
+main
+	position: relative
+	&::after
+		content: ''
+		width: 100%
+		clear: both !important
+	+breakpoint(md)
+		+px(1)
+	+breakpoint(sm)
+		+px(1)
+	+breakpoint
+		+px(1)
+
+footer#footer
+	background: url("../images/bg_footer.png") top center no-repeat #fff
+	background-size: 100% 6px
+	+pt(3)
+	+pb(2.1)
+	div.container
+		+row
+		+ais
+		+jcb
+		>div
+			+col(6)
+			+breakpoint(sm)
+				+col(12)
+				+jcc
+			+breakpoint
+				+col(12)
+				+jcc
+		div.logo
+			+row
+			div
+				+col-auto
+				&:first-of-type
+					+mr(2)
+				+breakpoint
+					+mt(1)
+		div.footer_link
+			+breakpoint(sm)
+				+cols
+			dl.share
+				+row
+				+aie
+				+jce
+				+mb(1)
+				dd
+					+col-auto
+					+no-gutters
+					+pr(.75)
+					&:nth-of-type(1), &:nth-of-type(2)
+						&::after
+							content: "．"
+							+pl(.75)
+				dd.footerFB
+					img
+						width: 9px
+				dd.footerYT
+					+px(.75)
+					img
+						width: 19px
+				dd.footerTW
+					+px(.75)
+					img
+						width: 18px
+				dd.footerIG
+					+pl(.75)
+					+pr(0)
+					img
+						width: 16px
+				+breakpoint(sm)
+					+jcc
+					+mt(1)
+				+breakpoint
+					+jcc
+					+mt(2)
+					dd
+						&:nth-of-type(2)
+							&::after
+								display: none
+					dd.footerFB, dd.footerYT, dd.footerTW, dd.footerIG
+						display: none
+			// copyright
+			div.copyright
+				color: $copyright
+				+tar
+				+breakpoint(sm)
+					+tac
+
+// 檔案下載icon
+.file_ext
+	background-repeat: no-repeat
+	background-size: 20px
+	display: inline-block !important
+.file_doc
+	background-image: url("../images/file_ext/doc.png")
+.file_img
+	background-image: url("../images/file_ext/img.png")
+.file_mov
+	background-image: url("../images/file_ext/mov.png")
+.file_other
+	background-image: url("../images/file_ext/other.png")
+.file_pdf
+	background-image: url("../images/file_ext/pdf.png")
+.file_ppt
+	background-image: url("../images/file_ext/ppt.png")
+.file_txt
+	background-image: url("../images/file_ext/txt.png")
+.file_xls
+	background-image: url("../images/file_ext/xls.png")
+.file_zip
+	background-image: url("../images/file_ext/zip.png")
+.file_odp
+	background-image: url("../images/file_ext/odp.png")
+.file_csv
+	background-image: url("../images/file_ext/csv.png")
+.file_ods
+	background-image: url("../images/file_ext/ods.png")
+.file_odt
+	background-image: url("../images/file_ext/odt.png")
+.file_xml
+	background-image: url("../images/file_ext/xml.png")
+
+#colorbox, #cboxOverlay, #cboxWrapper
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10200
+	overflow: hidden
+#cboxOverlay
+	position: fixed
+	width: 100%
+	height: 100%
+#cboxMiddleLeft, #cboxBottomLeft
+	clear: left
+#cboxContent
+	position: relative
+	font-size: 0.8125rem
+#cboxLoadedContent
+	overflow: auto
+	padding: 30px 5px 60px 5px
+#cboxTitle
+	margin: 0
+#cboxLoadingOverlay, #cboxLoadingGraphic
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow
+	cursor: pointer
+.cboxPhoto
+	float: left
+	margin: auto
+	border: 0
+	display: block
+	max-width: none
+.cboxIframe
+	width: 100%
+	height: 100%
+	display: block
+	border: 0
+#colorbox, #cboxContent, #cboxLoadedContent
+	box-sizing: content-box
+#colorbox_thum
+	padding-top: 10px
+	margin-top: 0
+	margin-bottom: 30px
+	overflow: hidden
+#colorbox_thum::after
+	content: ""
+	display: block
+	clear: both
+#colorbox_thum a
+	width: 25%
+	display: block
+	float: left
+	overflow: hidden
+	text-align: center
+	vertical-align: middle
+	-webkit-transition: transform 0.3s ease, opacity 0.3s ease
+	-moz-transition: transform 0.3s ease, opacity 0.3s ease
+	transition: transform 0.3s ease, opacity 0.3s ease
+#colorbox_thum a:hover
+	opacity: 0.8
+	-webkit-transform: scale(1.02)
+	-moz-transform: scale(1.02)
+	transform: scale(1.02)
+#colorbox_thum a span
+	display: block
+	padding-bottom: 66.176470588%
+	text-indent: -9999px
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	+mx(1)
+	+mb(2)
+
+// pagination
+#Pagination
+	+pagination
+
+div.Loading
+	height: 32px
+	background: url("../images/loader.gif") 50% 50% no-repeat
+	+mt(3)

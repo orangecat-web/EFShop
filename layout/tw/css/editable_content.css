@@ -1,0 +1,614 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.editable_content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.editable_content.content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#main_content+.editable_content.content {
+    margin-top: 10px;
+}
+
+
+/* 為文字上稿區可能出現的元素做設定 */
+
+
+/*.editable_content, .editable_content p, .editable_content li, .editable_content div, .editable_content blockquote { text-align:justify; text-justify:inter-ideograph; }*/
+
+.editable_content,
+.editable_content p,
+.editable_content li,
+.editable_content div,
+.editable_content blockquote {
+    line-height: 200%;
+}
+
+.editable_content .district,
+.editable_content div,
+.editable_content table,
+.editable_content iframe,
+.editable_content blockquote {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.editable_content p,
+.editable_content ul,
+.editable_content ol {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.editable_content p {
+    padding: 0;
+}
+
+.editable_content h4,
+.editable_content h5,
+.editable_content h6 {
+    margin-bottom: 5px;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+.editable_content h4+*:not(h4):not(h5):not(h6),
+.editable_content h5+*:not(h4):not(h5):not(h6),
+.editable_content h6+*:not(h4):not(h5):not(h6) {
+    margin-top: 10px;
+}
+
+.editable_content h4+h4,
+.editable_content h4+h5,
+.editable_content h4+h6,
+.editable_content h5+h4,
+.editable_content h5+h5,
+.editable_content h5+h6,
+.editable_content h6+h4,
+.editable_content h6+h5,
+.editable_content h6+h6 {
+    margin-top: 20px;
+}
+
+.editable_content h4 {
+    font-size: 1.5rem;
+    color: #da816e;
+    overflow: hidden;
+}
+
+.editable_content h5 {
+    font-size: 1.375rem;
+    color: #444444;
+}
+
+.editable_content h6 {
+    font-size: 1.25rem;
+    color: #444444;
+}
+
+.editable_content blockquote {
+    margin: 0px 0 35px 0;
+    padding: 35px 80px;
+    background: #d5eafd;
+    border-left: none;
+    overflow: hidden;
+    font-size: 1.125em;
+    position: relative;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.editable_content .district .imgleft~blockquote,
+.editable_content .district .imgright~blockquote {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.editable_content blockquote::before,
+.editable_content blockquote::after {
+    display: block;
+    position: absolute;
+    font-family: "Times New Roman", "serif";
+    font-size: 100px;
+    line-height: 100%;
+    color: #a7a7a7;
+}
+
+.editable_content blockquote::before {
+    content: '“';
+    top: 10px;
+    left: 30px;
+}
+
+.editable_content blockquote::after {
+    content: '”';
+    bottom: -30px;
+    right: 30px;
+}
+
+.editable_content ol {
+    list-style-type: decimal;
+    padding-left: 25px;
+    overflow: hidden;
+}
+
+.editable_content ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    overflow: hidden;
+}
+
+.editable_content ul[type="disc"] {
+    list-style-type: disc;
+}
+
+.editable_content ul[type="circle"] {
+    list-style-type: circle;
+}
+
+.editable_content ul[type="square"] {
+    list-style-type: square;
+}
+
+.editable_content li {
+    margin-bottom: 10px;
+}
+
+.editable_content ol ol {
+    list-style-type: lower-alpha;
+}
+
+.editable_content ul ul {
+    list-style-type: circle;
+}
+
+.editable_content ul ul,
+.editable_content ul ol,
+.editable_content ol ul,
+.editable_content ol ol {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.editable_content ul li:last-child,
+.editable_content li:last-child {
+    margin-bottom: 0;
+}
+
+.editable_content hr {
+    margin: 30px 0;
+}
+
+
+/* 影片、相關連結、相關檔案 */
+
+.MsgModule_Download span,
+.MsgModule_Link span {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.MsgModule_Download+.MsgModule_Download,
+.MsgModule_Download+.MsgModule_Link,
+.MsgModule_Link+.MsgModule_Download,
+.MsgModule_Link+.MsgModule_Link {
+    margin-top: -10px;
+}
+
+.editable_content .MsgModule_Media {
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+}
+
+.editable_content .MsgModule_Media.left {
+    margin-left: 0;
+}
+
+.editable_content .MsgModule_Media.right {
+    margin-right: 0;
+}
+
+.editable_content .MsgModule_Media.landscape {
+    width: 560px;
+}
+
+.editable_content .MsgModule_Media.portrait {
+    width: 315px;
+}
+
+.editable_content .MsgModule_Media .media_wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 56.25%;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.editable_content .MsgModule_Media.landscape.ratio_16by9 .media_wrap {
+    padding-bottom: 56.25%;
+}
+
+.editable_content .MsgModule_Media.portrait.ratio_16by9 .media_wrap {
+    padding-bottom: 177.77%;
+}
+
+.editable_content .MsgModule_Media.landscape.ratio_4by3 .media_wrap {
+    padding-bottom: 75%;
+}
+
+.editable_content .MsgModule_Media.portrait.ratio_4by3 .media_wrap {
+    padding-bottom: 133.33%;
+}
+
+.editable_content .MsgModule_Media .media_wrap iframe,
+.editable_content .MsgModule_Media .media_wrap object,
+.editable_content .MsgModule_Media .media_wrap embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+}
+
+.editable_content .MsgModule_Media .describe {
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    line-height: 150%;
+}
+
+.editable_content .MsgModule_Media .describe span {
+    display: block;
+}
+
+.editable_content .MsgModule_Media .describe .title {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.editable_content .MsgModule_Media .describe .desc {}
+
+.editable_content noscript div.ytlink {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+}
+
+
+/* no script時影片區塊顯示的訊息 */
+
+.editable_content .MsgModule_Media video {
+    display: block;
+    width: 100%;
+}
+
+
+/* 文繞圖設定 */
+
+.editable_content .district::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.editable_content .district .img_bg+* {
+    margin-top: 0;
+}
+
+.editable_content .district>*:first-child {
+    margin-top: 0;
+}
+
+.editable_content .district>*:last-child {
+    margin-bottom: 0;
+}
+
+.editable_content .img_bg {
+    margin-bottom: 15px;
+}
+
+.editable_content .imgleft {
+    float: left;
+    margin-right: 25px;
+}
+
+.editable_content .imgright {
+    float: right;
+    margin-left: 25px;
+}
+
+.editable_content .imgcenter {
+    clear: both;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editable_content .imgleft,
+.editable_content .imgright {
+    max-width: 50%;
+}
+
+.editable_content .img_bg span {
+    display: block;
+    padding: 0 0 0 14px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 140%;
+    text-align: left;
+}
+
+.editable_content .img_bg span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: 5px solid #818181;
+}
+
+
+/* 單篇延伸區塊 */
+
+.editable_content h4.ext_title {
+    padding-left: 70px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    position: relative;
+    color: #009c84;
+    font-size: 1.5rem;
+    line-height: 56px;
+    letter-spacing: 1px;
+}
+
+.editable_content h4.ext_title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #bebebe;
+    box-sizing: border-box;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.editable_content h4.ext_title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    margin-top: -14px;
+    background: url("../images/icon_module.png") no-repeat;
+    background-size: cover;
+}
+
+.editable_content h4.icon_file::after {
+    background-position: 0 0;
+}
+
+.editable_content h4.icon_link::after {
+    background-position: 0 50%;
+}
+
+.editable_content h4.icon_photo::after {
+    background-position: 0 100%;
+}
+
+.editable_content+h4.ext_title {
+    margin-top: 40px;
+}
+
+.editable_content ul.ext_list {
+    margin: 10px 0 40px 26px;
+    padding-left: 60px;
+    border-left: 2px solid #d5d5d5;
+    list-style-type: decimal;
+    overflow: hidden;
+}
+
+.editable_content h4.ext_title.icon_photo+#colorbox_thum {
+    border-left: 2px solid #d5d5d5;
+}
+
+.editable_content ul.ext_list li {
+    position: relative;
+    padding: 4px 0;
+    line-height: 180%;
+}
+
+.editable_content ul.ext_list li a {
+    color: #595959;
+    text-decoration: none;
+}
+
+.editable_content ul.ext_list li a:hover,
+.editable_content ul.ext_list li a:focus {
+    color: #009c84;
+    text-decoration: underline;
+}
+
+.editable_content ul.ext_list li span.file_ext {
+    margin-left: 6px;
+    text-indent: -10000px;
+    vertical-align: middle;
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+
+/* html編輯區的表格預設樣式 */
+
+.editable_content table[align="center"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editable_content table caption {
+    margin: 5px 0;
+    padding: 5px 0;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    line-height: 150%;
+}
+
+.editable_content .tableWrap {
+    position: relative;
+    overflow-y: auto;
+    _overflow: auto;
+    width: 100%;
+    margin-bottom: 1em;
+    -webkit-overflow-scrolling: touch;
+}
+
+.editable_content .tableWrap table {
+    margin: 0;
+}
+
+
+/*添加IOS下卷軸*/
+
+.editable_content .tableWrap::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+}
+
+.editable_content .tableWrap::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid #fafafa;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.editable_content .tableWrap::-webkit-scrollbar-thumb:hover {
+    background-color: #009c84;
+}
+
+
+/* html編輯區的表格外框樣式 */
+
+.editable_content table.table_style1 {
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.editable_content .table_style1>tbody>tr>th,
+.editable_content .table_style1>tbody>tr>td {
+    padding: 8px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    line-height: 160%;
+}
+
+.editable_content .table_style1>tbody>tr>th {
+    background-color: #dedede;
+    color: #333;
+    white-space: nowrap;
+}
+
+
+/* 移除第一個物件的上邊界、上間距避免過大的空白 */
+
+.editable_content>*:first-child,
+.editable_content blockquote>*:first-child,
+.editable_content td>*:first-child {
+    margin-top: 0;
+}
+
+
+/* 移除最後一個物件的下邊界、下間距避免過大的空白 */
+
+.editable_content>*:last-child,
+.editable_content blockquote>*:last-child,
+.editable_content td>*:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 避免爆版 */
+
+.editable_content iframe,
+.editable_content img,
+.editable_content div,
+.editable_content p,
+.editable_content span {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.editable_content * {
+    word-wrap: break-word;
+}
+
+
+/* 取消圖片的高度設定避免RWD時不等比例縮放 */
+
+.editable_content img {
+    height: auto;
+}
+
+
+/* 新增表格樣式 */
+
+.editable_content table.table_style2 {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.editable_content table.table_style2>tbody>tr>td {
+    padding: 15px;
+    line-height: 160%;
+    vertical-align: top;
+    width: 50%;
+}
+
+.editable_content table.table_style2 h6 {
+    color: #d42828;
+}
+
+.editable_content table.table_style2 h6 a {
+    color: #d42828;
+    text-decoration: none;
+}
+
+.editable_content table.table_style2 h6 a:hover {
+    text-decoration: underline;
+}
+
+.editable_content table.table_style2 p {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 639px) {
+    .editable_content table.table_style2>tbody>tr,
+    .editable_content table.table_style2>tbody>tr>td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

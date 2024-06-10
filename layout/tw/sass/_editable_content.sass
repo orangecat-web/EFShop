@@ -1,0 +1,95 @@
+@import _mixin
+.editable_content
+	color: #333
+	+fontSize(1.125)
+	+mt(.666667)
+	+mb(2.666667)
+	// 為文字上稿區可能出現的元素做設定
+	a
+		text-decoration: underline
+	p, .para, blockquote
+		line-height: 200%
+	p, .para, ul, ol, div, table, iframe
+		+mt(.666667)
+		+mb(1.33333333)
+	h4, h5, h6
+		line-height: 120%
+
+	// 引言區塊
+	blockquote
+		background-color: #f5f5f5
+		border-radius: 20px
+		color: #333
+		margin: 5.5erm auto
+		padding: 3.4375rem 3.75rem
+		&::before, &::after
+			content: ''
+			width: 60px
+			height: 60px
+			background: url('../images/img_blockquote_deco.png') no-repeat
+			background-size: cover
+			position: absolute
+			display: block
+		&::before
+			background-position: center 0
+			top: -25px
+			left: 20px
+		&::after
+			background-position: center -60px
+			bottom: -25px
+			right: 20px
+		p
+			line-height: 200%
+			+mt(0)
+		ul, ol
+			line-height: 180%
+			li li
+				line-height: 160%
+		ol
+			list-style-type: decimal
+			margin-left: 40px
+		ul
+			list-style-type: disc
+			margin-left: 40px
+			[type="disc"]
+				list-style-type: disc
+			[type="circle"]
+				list-style-type: circle
+			[type="square"]
+				list-style-type: square
+// 影片、相關連結、相關檔案
+p.MsgModule_Download, p.MsgModule_Link
+	line-height: 160%
+	+p(0)
+	span
+		font-weight: bold
+.MsgModule_Media
+	+mx-auto
+	+py(.6666667)
+	iframe
+		margin: 0 !important
+	.describe
+		bakcground: #f5f5f5
+		+tal
+		+m(0)
+		padding: 10px
+		span
+			line-height: 180%
+// no script時影片區塊顯示的訊息
+noscript div.ytlink
+	line-height: 18px
+	+p(0)
+
+.MsgModule_Media
+	width: 560px
+	+mx-auto
+	.media_wrap
+		+mt(0)
+.MsgModule_Media.left
+	+ml(0)
+.MsgModule_Media.right
+	+mr(0)
+.MsgModule_Media.landscape
+	width: 560px
+.MsgModule_Media.protrait
+	width: 315px

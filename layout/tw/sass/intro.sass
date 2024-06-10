@@ -1,0 +1,278 @@
+// 【2021-商業服務業雙語資源入口(英語店家通)-EFShop】 入口頁
+@import _basic
+body
+	background: url("../images/bg_body.png") left top repeat
+	position: relative
+	&::before
+		content: ""
+		width: $width
+		height: $height
+		background: url("../images/bg_intro_desktop.png") 50% bottom no-repeat
+		background-size: cover
+		position: absolute
+		z-index: 1
+	+breakpoint(md)
+		&::before
+			background: url("../images/bg_intro_tablets.png") 50% bottom no-repeat
+			background-size: cover
+	+breakpoint(sm)
+		&::before
+			background: url("../images/bg_intro_tablets.png") 50% top no-repeat
+			background-size: cover
+	+breakpoint(ipadprop)
+		&::before
+			background: url("../images/bg_intro_tablets.png") 50% bottom no-repeat
+			background-size: cover
+	+breakpoint
+		&::before
+			background: url("../images/bg_intro_mobile.png") 50% top no-repeat
+			background-size: cover
+// a
+// 	&:focus
+// 		outline: 2px dashed #d95051
+article.container
+	position: relative
+	z-index: 2
+	+container(xxl)
+	height: $height
+	+row
+	+jcc
+	+aib
+	+acb
+	section
+		+col(10)
+		+mt(10)
+		+mx-auto
+		// section RWD
+		+breakpoint(d1440)
+			+col(8)
+		+breakpoint(d1366)
+			+col(7)
+		+breakpoint(d1280)
+			+col(7)
+		+breakpoint(lg)
+			+col(7)
+			+mt(7)
+		+breakpoint(md)
+			+mt(6)
+		+breakpoint(sm)
+			+mt(1)
+		+breakpoint(ipadprop)
+			+mt(30)
+		+breakpoint
+			+col(12)
+			+px(0)
+		+breakpoint(ip5p)
+			+mt(2)
+		+breakpoint(ip5l)
+			+mt(1)
+		+breakpoint(ip6p)
+			+mt(4)
+		+breakpoint(ipxp)
+			+mt(10)
+		+breakpoint(ipxl)
+			+mt(1)
+		+breakpoint(ippp)
+			+mt(5)
+		+breakpoint(ip11maxl)
+			+mt(1)
+		+breakpoint(ip12prol)
+			+mt(1)
+		+breakpoint(ip12maxl)
+			+mt(1)
+		header
+			background: rgba(195, 220, 249, .5)
+			+row
+			+aic
+			+jcc
+			+radius(20)
+			+mb(2)
+			+py(1.5)
+			+px(1.5)
+			div
+				+col(4)
+				+px(0)
+				a
+					img
+						border-radius: 50%
+			div.logo
+				order: 2
+			div.zh_tw
+				order: 1
+				+tal
+				a
+					img
+						box-shadow: #ff8d4c 5px 5px
+					&:hover, &:focus
+						img
+							box-shadow: none
+			div.en
+				order: 3
+				+tar
+				a
+					img
+						box-shadow: #e1556c 5px 5px
+					&:hover, &:focus
+						img
+							box-shadow: none
+			// header RWD
+			+breakpoint(md)
+				background: none
+				div
+					+col(5)
+				div.logo
+					order: 1
+					+col(8)
+					+tac
+			+breakpoint(sm)
+				background: rgba(195, 220, 249, .5)
+				div
+					+col(4)
+				div.logo
+					order: 2
+					+col(4)
+				+mb(0)
+			+breakpoint
+				background: none
+				+mb(0)
+				div
+					+col(6)
+				div.logo
+					order: 1
+					+col(10)
+					+tac
+			+breakpoint(ip5l)
+				background: rgba(195, 220, 249, .5)
+				+mb(0)
+				div
+					+col(4)
+				div.logo
+					order: 2
+					+col(4)
+			+breakpoint(ipxl)
+				background: rgba(195, 220, 249, .5)
+				+mb(0)
+				div
+					+col(4)
+				div.logo
+					order: 2
+					+col(4)
+			+breakpoint(ip11maxl)
+				background: rgba(195, 220, 249, .5)
+				+mb(0)
+				div
+					+col(4)
+				div.logo
+					order: 2
+					+col(4)
+			+breakpoint(ip12prol)
+				background: rgba(195, 220, 249, .5)
+				+mb(0)
+				div
+					+col(4)
+				div.logo
+					order: 2
+					+col(4)
+			+breakpoint(ip12maxl)
+				background: rgba(195, 220, 249, .5)
+				+mb(0)
+				div
+					+col(4)
+				div.logo
+					order: 2
+					+col(4)
+		div.slogan
+			+row
+			+col(10)
+			+aie
+			+mx-auto
+			div
+				+col(6)
+				+mt(.5)
+			div.zh_tw
+				+tar
+				+ml-auto
+			// slogan RWD
+			+breakpoint(sm)
+				+col(12)
+				div
+					+col(5)
+			+breakpoint
+				div
+					+col(8)
+			+breakpoint(ip5l)
+				div
+					+col(5)
+			+breakpoint(ipxl)
+				div
+					+col(5)
+	footer
+		+col(12)
+		+mt(5)
+		+breakpoint(d1440)
+			+mt(4.5)
+		+breakpoint(lg)
+			+mt(3.5)
+		div.logo_link
+			+row
+			+jcc
+			+tac
+			+mb(1)
+			div
+				+col(3)
+				display: flex
+				+aic
+				+jcc
+				+tac
+				+breakpoint(md)
+					+col(4)
+				+breakpoint(sm)
+					+col(4)
+				+breakpoint
+					+col(12)
+					+mb(1)
+				img
+					width: auto
+					+px(1)
+		div.copyright
+			color: #7b7b7b
+			+tac
+			+pb(1.5)
+		// footer RWD
+		+breakpoint(d1280)
+			+mt(0)
+		+breakpoint(sm)
+			+mt(0)
+			div.logo_link
+				+mx-auto
+			div.copyright
+				+fontSize(.85)
+				+pb(1)
+		+breakpoint
+			+mt(9.5)
+			+pt(4)
+			div.logo_link
+				+col(12)
+		// apple device RWD
+		+breakpoint(ip5l)
+			+mt(0)
+			+pt(0)
+			div.logo_link
+				+mb(0)
+			div.copyright
+				+fontSize(.85)
+				+pb(1)
+		+breakpoint(ipxp)
+			+mt(0)
+		+breakpoint(ipxl)
+			+mt(0)
+			+pt(0)
+			div.logo_link
+				+mb(0)
+		+breakpoint(iplusp)
+			+pt(5)
+		+breakpoint(ipadl)
+			+mt(0)
+		+breakpoint(ip12prol)
+			div.copyright
+				+pb(1)

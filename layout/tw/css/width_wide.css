@@ -1,0 +1,432 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------------------------------------------------------------------*/
+/* Header */
+#Header { position:static; }
+#Header > div { padding:5px 0 0; text-align:center; }
+#Header .top_links, #Header .search { display:none; }
+#Header .col_left { margin-bottom:10px; height:50px; }
+
+/* logo */
+#Header .logo { width:240px; margin:0 auto; }
+#Header .logo a { text-align:center; }
+
+/* 字級 */
+#Header .font_size { vertical-align:middle; }
+
+/* 按鈕 */
+#Header .btns { display:inline-block; text-align:left; vertical-align:top; }
+#Header .btns a { height:32px; line-height:32px; margin-bottom:10px; }
+
+
+/*----------------------------------------------------------------------*/
+/* Menu */
+#Menu { display:none; }
+
+
+/*----------------------------------------------------------------------*/
+/* KeyVisual */
+#KeyVisual .bx-wrapper .bx-pager { display:none; }
+#KeyVisual .bx-wrapper .bx-controls-direction a { width:40px; height:40px; margin-top:-20px; }
+#KeyVisual .bx-wrapper .bx-controls-direction a::after { width:10px; height:10px; margin-top:-5px; }
+#KeyVisual .bx-wrapper .bx-controls-direction .bx-prev::after { left:16px; }
+#KeyVisual .bx-wrapper .bx-controls-direction .bx-next::after { right:16px; }
+
+
+/*----------------------------------------------------------------------*/
+/* Center */
+
+
+/*----------------------------------------------------------------------*/
+/* Footer */
+@media screen and (max-width: 767px) {
+#Footer > div { padding-left:10px; padding-right:10px; }
+}
+@media screen and (min-width: 768px) {
+#Footer > div { padding-left:20px; padding-right:20px; }
+}
+
+#Footer .col_left { margin-bottom:30px; }
+
+
+/*----------------------------------------------------------------------*/
+/* KeyVisual */
+
+
+/*----------------------------------------------------------------------*/
+/* 首頁區塊 */
+@media screen and (max-width: 767px) {
+.IndexBlock > div { padding-left:10px; padding-right:10px; }
+}
+@media screen and (min-width: 768px) {
+.IndexBlock > div { padding-left:20px; padding-right:20px; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 首頁常用連結 */
+.IndexCommonLinks ul { display:table; width:100%; table-layout:fixed; }
+.IndexCommonLinks ul li { display:table-cell; vertical-align:top; padding:20px; }
+.IndexCommonLinks .title a { font-size:1.375rem; }
+@media screen and (max-width: 899px) {
+.IndexCommonLinks .img { margin:0 auto 10px; }
+.IndexCommonLinks .title, .IndexCommonLinks .desc { text-align:center; }
+}
+@media screen and (min-width: 900px) {
+.IndexCommonLinks .img { float:left; }
+.IndexCommonLinks .title, .IndexCommonLinks .desc { margin-left:110px; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 首頁健檢套餐 */
+.index_product_group .tabs { display:none; }
+.index_product_group .tab_cont { 
+	border:1px solid #999; background-color:#fff; margin-top:-1px; 
+	transition:opacity 0.3s ease; overflow:hidden;
+	}
+.index_product_group .tab_container .tab_cont:first-child { 
+	-webkit-border-radius:20px 20px 0 0;
+	-moz-border-radius:20px 20px 0 0;
+	border-radius:20px 20px 0 0;
+	}
+.index_product_group .tab_container .tab_cont.active { border-top:1px solid #009c84; }
+.index_product_group .tab_container .tab_cont:last-child { 
+	-webkit-border-radius:0 0 20px 20px;
+	-moz-border-radius:0 0 20px 20px;
+	border-radius:0 0 20px 20px;
+	}
+.index_product_group .tab_cont > .cont { 
+	height:0; /*transform:scaleY(0);*/ visibility:hidden; opacity:0; overflow:hidden; transform-origin:center 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	}
+.index_product_group .tab_cont.active > .cont { height:auto; /*transform:scaleY(1);*/ visibility:visible; opacity:1; }
+.index_product_group .btn_more { padding-bottom:30px; }
+
+.index_product_list { padding:10px 0 0 0; }
+.index_product_list .item { margin-bottom:20px; }
+.index_product_list .item > div { padding:20px; }
+.index_product_list .img { 
+	float:left; width:35vw; 
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	}
+.index_product_list .cont { padding-left:20px; overflow:hidden; }
+.index_product_list .price { display:inline-block; margin-top:0; }
+.index_product_list .btn { margin-top:20px; }
+
+
+/*----------------------------------------------------------------------*/
+/* 首頁最新消息 */
+@media screen and (max-width: 767px) {
+.index_news_list .topic .img { max-width:420px; margin:0 auto 20px; }
+}
+@media screen and (min-width: 768px) {
+.index_news_list .topic .img { float:left; width:400px; max-width:40%; }
+.index_news_list .topic .cont { padding:0 20px; }
+}
+.index_news_list .topic, .index_news_list .cont { overflow:hidden; }
+.index_news_list .list { padding:30px 0 0; }
+.index_news_list .list .title { font-size:1.125rem; }
+
+/* topic沒有上圖 */
+@media screen and (min-width: 768px) {
+.index_news_list.no_image .topic { float:left; width:40%; }
+.index_news_list.no_image .topic .cont { padding:0; }
+.index_news_list.no_image .list { float:right; width:55%; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 首頁衛教保健小教室 */
+.index_article_list .desc { -webkit-line-clamp:4; max-height:8em; }
+@media screen and (max-width: 799px) {
+.index_article_list .item { width:50%; }
+}
+@media screen and (min-width: 800px) {
+.index_article_list .item { width:33.3333%; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 表單 */
+@media screen and (max-width: 767px) {
+.FormGroup, .FromSubGroup { padding:20px 20px 20px; }
+.FormGroup .FormTable, FromSubGroup .FormTable { width:auto; }
+
+table.FormTable { border-top:1px solid #e7e7e7; }
+table.FormTable , table.FormTable > tbody, table.FormTable > tbody > tr, table.FormTable > tbody > tr > th, table.FormTable > tbody > tr > td { display:block; }
+table.FormTable > tbody > tr { padding:15px 10px 10px 10px; border-bottom:1px solid #d4d0cd; }
+table.FormTable > tbody > tr > th, .FormTable > tbody > tr > td { border-bottom:0; }
+table.FormTable > tbody > tr > th { text-align:left; }
+
+.FormElmt input[type="file"] { width:100%; }
+}
+@media screen and (min-width: 768px) {
+.FormGroup, .FromSubGroup { padding:20px 30px 20px; }
+table.FormTable > tbody > tr > th, table.FormTable > tbody > tr > td { vertical-align:top; }
+table.FormTable > tbody > tr:last-child > th, table.FormTable > tbody > tr:last-child > td { border-bottom:0; }
+table.FormTable > tbody > tr > th { width:150px; padding:15px 15px 15px 6px; text-align:right; font-size:1rem; }
+table.FormTable > tbody > tr > th::after { position:absolute; top:14px; right:0; }
+table.FormTable > tbody > tr > th:empty::after { display:none; }
+table.FormTable > tbody > tr > td { padding:10px 15px 4px 15px; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 內頁 */
+@media screen and (max-width: 639px) {
+#Content { padding-left:10px; padding-right:10px; }
+}
+@media screen and (min-width: 640px) {
+#Content { padding-left:20px; padding-right:20px; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 內頁元素 */
+/* 導覽列(麵包屑) */
+
+/* 工具列 */
+.ToolBar .colm_left a, .ToolBar dl.font_size, .ToolBar dl.share { line-height:40px; }
+.ToolBar .colm_left a span, .ToolBar dl.font_size a, .ToolBar dl.share a { width:40px; height:40px; }
+.ToolBar .colm_left .return, .ToolBar .colm_left .print { display:none; }
+.ToolBar .colm_left { float:left; }
+.ToolBar .colm_left a { padding-left:44px; }
+.ToolBar .colm_right { float:right; }
+
+/* 標題 */
+h3.articleTitle { font-size:1.75rem; }
+
+/* 分類下拉 */
+.CatTitle h3 { float:left; }
+.CatTitle h3 + .cat_select { float:right; }
+
+/* 列表搜尋 */
+.ListSearch { padding:14px 19px 14px 19px; }
+.ListSearch .title { display:none; }
+
+/* 頁碼 */
+#Pagination a { display:none; }
+#Pagination a.first, #Pagination a.prev, #Pagination a.next, #Pagination a.last { display:inline-block; }
+#Pagination .setting { padding-top:10px; line-height:24px; }
+#Pagination .dev-script-oper { display:none; }
+
+/* 內頁顯示欄位 */
+.content_info ul { display:table; }
+.content_info li { display:table-row; }
+.content_info li span { display:table-cell; vertical-align:top; padding:5px 0; }
+.content_info li span.title { text-align:right; }
+
+/* 編輯器 */
+.editable_content blockquote { margin-left:60px; margin-right:60px; }
+@media screen and (max-width: 767px) {
+.editable_content blockquote { padding:30px 60px; }
+.editable_content blockquote::before, .editable_content blockquote::after { font-size:60px; }
+.editable_content blockquote::before { left:10px; }
+.editable_content blockquote::after { right:10px; }
+}
+@media screen and (min-width: 768px) {
+.editable_content blockquote { padding:40px 80px; }
+.editable_content blockquote::before, .editable_content blockquote::after { font-size:80px; }
+.editable_content blockquote::before { left:20px; }
+.editable_content blockquote::after { right:20px; }
+}
+
+/* colorbox */
+#colorbox_thum a { width:160px; height:120px; margin:10px; }
+
+
+/*----------------------------------------------------------------------*/
+/* 文字列表 */
+.ListTable table, .ListTable table tbody, .ListTable table tr, .ListTable table th, .ListTable table td { display:block; }
+.ListTable { margin-top:40px; margin-bottom:60px; border:1px solid #e1e1e1; }
+.ListTable table tr:first-child { position:absolute; left:-10000px; top:-10000px; }
+.ListTable table tr { padding:10px 20px; border-bottom:1px solid #dddddd; }
+.ListTable table tr:last-child { border-bottom:0; }
+.ListTable table tr:nth-child(odd) { background-color:#fafafa; }
+
+.ListTable table td { margin:5px 0; text-align:left; }
+.ListTable td.no { display:none; }
+.ListTable td:before { font-weight:bold; content: attr(data-th)"："; }
+.ListTable td.no:before, .ListTable td:first-child.date:before, .ListTable td.title:before { 
+	content:""; 
+	}
+.ListTable td.date { display:inline-block; font-size:0.875rem; position:relative; }
+.ListTable td.date br { display:none; }
+.ListTable td.title { margin-top:0; font-size:1.25rem; line-height:150%; position:relative; }
+
+
+/*----------------------------------------------------------------------*/
+/* 圖文列表 */
+/* list-view */
+.ListPicText.list-view.single.staggered .item:nth-child(2n+2) .img { float:right; padding-right:0; }
+.ListPicText.list-view .img { float:left; width:360px; max-width:48%; margin-bottom:10px; }
+.ListPicText.list-view .img > div { 
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	}
+.ListPicText.list-view .btn { margin-top:10px; }
+
+/* grid-view */
+.ListPicText.grid-view .cont { padding-top:10px; }
+@media screen and (max-width: 799px) {
+.ListPicText.grid-view .cont { padding-bottom:70px; }
+}
+@media screen and (min-width: 800px) {
+.ListPicText.grid-view .cont { padding-bottom:80px; }
+}
+.ListPicText.grid-view > div { margin-left:-10px; margin-right:-10px; }
+.ListPicText.grid-view .item { padding-left:10px; padding-right:10px; }
+.ListPicText.grid-view .date { margin-top:-25px; }
+.ListPicText.grid-view .btn { position:absolute; bottom:20px; left:0; width:100%; text-align:center; }
+
+@media screen and (max-width: 799px) {
+.ListPicText .title a { font-size:1.25rem; }
+.ListPicText .desc { font-size:1rem; }
+
+/* list-view 一律以單欄顯示 */
+.ListPicText.list-view.single.staggered .item:nth-child(2n+2) .img { padding-left:15px; }
+.ListPicText.list-view .img { padding-right:15px; }
+.ListPicText.list-view .item > div { padding:15px; }
+.ListPicText.list-view .desc { max-height:8em; -webkit-line-clamp:4; }
+
+/* grid-view 一律以兩欄顯示 */
+.ListPicText.grid-view .item { float:left; width:50%; }
+.ListPicText.grid-view .desc { max-height:8em; -webkit-line-clamp:4; }
+}
+	@media screen and (min-width: 640px) and (max-width: 699px) {
+	.ListPicText.grid-view .cont { padding-left:15px; padding-right:15px; }
+	}
+	@media screen and (min-width: 700px) and (max-width: 799px) {
+	.ListPicText.grid-view .cont { padding-left:20px; padding-right:20px; }
+	}
+
+@media screen and (min-width: 800px) {
+.ListPicText .title a { font-size:1.25rem; }
+.ListPicText .desc { font-size:1rem; }
+
+/* list-view 一律以單欄顯示 */
+.ListPicText.list-view.single.staggered .item:nth-child(2n+2) .img { padding-left:20px; }
+.ListPicText.list-view .img { padding-right:20px; }
+.ListPicText.list-view .item > div { padding:20px; }
+.ListPicText.list-view .desc { max-height:6em; -webkit-line-clamp:3; }
+
+/* grid-view 一律以三欄顯示 */
+.ListPicText.grid-view .item { float:left; width:33.3333%; }
+}
+	@media screen and (min-width: 800px) and (max-width: 899px) {
+	.ListPicText.grid-view .cont { padding-left:15px; padding-right:15px; }
+	.ListPicText.grid-view .desc { max-height:10em; -webkit-line-clamp:5; }
+	}
+	@media screen and (min-width: 900px) {
+	.ListPicText.grid-view .cont { padding-left:20px; padding-right:20px; }
+	.ListPicText.grid-view .desc { max-height:8em; -webkit-line-clamp:4; }
+	}
+
+
+/*----------------------------------------------------------------------*/
+/* 健檢方案 */
+.ProductList > div { margin-left:-10px; margin-right:-10px; }
+.ProductList .item { padding-left:10px; padding-right:10px; }
+.ProductList .cont { padding-top:10px; }
+.ProductList .btn { position:absolute; bottom:20px; left:0; width:100%; text-align:center; }
+
+@media screen and (max-width: 799px) {
+.ProductList .item { float:left; width:50%; }
+.ProductList .cont { padding-bottom:70px; }
+.ProductList .title a { font-size:1.25rem; }
+.ProductList .desc { font-size:1rem; max-height:8em; -webkit-line-clamp:4; }
+}
+	@media screen and (min-width: 640px) and (max-width: 699px) {
+	.ProductList .cont { padding-left:15px; padding-right:15px; }
+	}
+	@media screen and (min-width: 700px) and (max-width: 799px) {
+	.ProductList .cont { padding-left:20px; padding-right:20px; }
+	}
+
+@media screen and (min-width: 800px) {
+.ProductList .item { float:left; width:33.3333%; }
+.ProductList .cont { padding-bottom:80px; }
+.ProductList .title a { font-size:1.25rem; }
+.ProductList .desc { font-size:1rem; }
+}
+	@media screen and (min-width: 800px) and (max-width: 899px) {
+	.ProductList .cont { padding-left:15px; padding-right:15px; }
+	.ProductList .desc { max-height:10em; -webkit-line-clamp:5; }
+	}
+	@media screen and (min-width: 900px) {
+	.ProductList .cont { padding-left:20px; padding-right:20px; }
+	.ProductList .desc { max-height:8em; -webkit-line-clamp:4; }
+	}
+
+
+/*----------------------------------------------------------------------*/
+/* 交通資訊 */
+@media screen and (max-width: 799px) {
+.TrafficInfo h3 { margin-bottom:30px; font-size:2rem; }
+}
+@media screen and (min-width: 800px) {
+.TrafficInfo { border-top:1px solid #ccc; }
+.TrafficInfo + .TrafficInfo { margin-top:-1px; }
+.TrafficInfo h3 { float:left; width:160px; font-size:1.5rem; }
+.TrafficInfo .item { margin-left:200px; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 經營團隊 */
+@media screen and (max-width: 767px) {
+.TeamList .item { width:50%; }
+}
+@media screen and (min-width: 768px) {
+.TeamList .item { width:33.3333%; }
+}
+	@media screen and (min-width: 768px) and (max-width: 899px) {
+	.TeamList a .info_list dd { font-size:0.9375rem; }
+	}
+
+/* popup box */
+@media screen and (orientation: portrait) and (max-width: 799px) {
+.team_box .box_wrap > div { padding:20px 20px 10px 20px; }
+.team_box .box_wrap { width:96vw; height:96vh; margin:-48vh 0 0 -48vw; }
+}
+@media screen and (orientation: portrait) and (min-width: 800px) {
+.team_box .box_wrap > div { padding:60px 40px 20px 40px; }
+.team_box .box_wrap { width:90vw; height:90vh; margin:-45vh 0 0 -45vw; }
+}
+@media screen and (orientation: landscape) {
+.team_box .box_wrap > div { padding:30px 20px 10px 20px; }
+.team_box .box_wrap { width:96vw; height:90vh; margin:-45vh 0 0 -48vw; }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* 登入 */
+@media screen and (max-width: 767px) {
+.loginBox.FormElmt .randomcode .btn > * { 
+	width:44px; padding:0; background-color:#eaeaea; text-indent:-100px; overflow:hidden; 
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	}
+	.loginBox.FormElmt .randomcode .btn > *:hover { background-color:#cecece; }
+.loginBox.FormElmt .randomcode .btn input { font-size:0; line-height:0; }
+.loginBox.FormElmt .randomcode .btn .refresh { background-position:center 4px; }
+.loginBox.FormElmt .randomcode .btn .play { background-position:center -32px; }
+}
+
+/*----------------------------------------------------------------------*/
+/* 健檢會員 */
+.case_info { margin-bottom: 30px; position: relative; }
+.case_data { display: flex; flex-wrap: wrap; }
+.case_data .item { padding: 6px 20px; width: 33.333%; box-sizing: border-box; }
+.case_info .btn { position: absolute; right: 0; top: 8px; }
+.case_nav { display: flex; flex-wrap: wrap; }
+.case_nav .item { width: calc(50% - 25px); }
+.case_nav .item:nth-child(even) { margin-left: 50px; }
